@@ -1,0 +1,131 @@
+kad umres pusti kako si majko kako si oce
+
+napravimo hp bar da bude krug i da ne pise koliko helta
+imas, neko prelazi iz zelene u crvenu boju ( mozda za hard mode )
+
+day and night circle
+
+easter egg, learn soba, goblin random izadje
+
+uradi ceo crew members sa ship start
+
+
+
+
+
+ship upgrades ----
+
+
+
+
+mercenaries  ----
+
+
+
+enciklopedija ----
+
+
+
+fight mechanic -----------------------------------------------------------------
+
+BLOCK 50% damage 50% less hit
+attack base damage
+
+max 3 spells (epic units ulti)
+
+
+Ninja pozicioner ---
+passive  1 tree blink 1 invis 50% damage na invis
+
+hook, slash
+
+shooriken, 2 tiles back dash invis
+
+meditacija ili omaeva
+
+ninja poison ----
+
+wing-chun baja ---
+passiv deals 60% AT, hits 3 times
+
+1. chain punches 
+attack 7 times
+
+2. stance
+x2 speed
+
+3. empower
+20 damage onhit 
+20% health block
+
+Pop ---
+passive increase healing 15%
+1. single target healing
+
+2. global heal
+
+3. blind (cant attack)
+
+nun ---
+cant attack, cant be attacked
+
+1. toggle heal aura
+
+2. toggle blessing aura
+
+3. toggle empowerment aura --> combo stacks
+
+
+
+sand bata ---
+passive mummie die, get mana, excess mana creates mummie
+mummies die after 3-4
+
+1. summon 2 mummies from earth, empowered 4
+
+2. sand block 60% meele, 80% ranged block, empowered 1-2 mummiesS
+
+3. teleport if not within tile, empowered, summon mummie
+
+
+
+
+snajper 1 ---
+
+
+snajper 2 ---
+if 3 turns not moved - gain invis
+
+1. take aim
+
+2. (evade bezanija)
+
+3.
+
+buzdovan bata --
+passive thorns, return 20% damage
+
+1. hit stun
+
+2. shield
+
+3. charge
+
+jahac ----
+passive, gain 2 damage per kill per combat
+
+1. leg kick, deals damage knocks back (empowered, double distance and damage mby)
+
+2. summon 2-5 skeletons ( based on kills ), (empowered, heal)
+
+3. 3hit on same target --> dot i stuff
+
+ulti :
+
+
+
+factions: ninja, wizard, sand, dark knight, 
+
+
+
+

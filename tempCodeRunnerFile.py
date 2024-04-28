@@ -1,0 +1,1 @@
+        # onClickMove(mouse_x, mouse_y, character_position, character_position1)

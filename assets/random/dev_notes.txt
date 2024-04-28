@@ -1,0 +1,43 @@
+imas u samplu za mainmenu foru za fontove...
+
+muzika
+
+shortcut keys, 
+https://codepen.io/alexkleinubing/pen/JjbPXrQ
+dole levo, dobra ideja
+
+
+kropuj images za dugmice
+
+------ 
+nigela pitaj inspo;
+
+
+-----   Battle logic
+namesti da grid ne krece od gore i skipuje nego da krece odakle treba
+srediti magic brojeve
+srediti biblioteke i raspodelu fajlova
+
+----- Main menu
+srediti kvadrate da reaguju tacno na velicini slike
+
+
+* ------------
+grid.py (logika grida i reakcije misa) --> salje poziciju (14 x 4 setup grid) (14 x 21 battle grid)
+utilities --> sve vezano za battle mehaniku
+MercUtilities --> objekti mercenarija
+merc render --> draw opcije i animacija
+level logic
+story textovi zaseban fajl
+NIJEDNA DEFINICIJA U MAIN FUNKCIJI!!!
+
+-------------- za sutra
+srediti bag sa povecanim tajlovima
+srediti da sve svetli kako treba i pomeranje karaktera i njihove koordinate rade
+i u starting funkciji, povezati te funkcije u foldere sazebno
+
+dodati opsti skeleton borbe i probati da ubacis 2 karaktera da se fajtaju
+koristi spritesheet random fajla
+
+pitati cetaru kako je okej da se postave pasivni abilitiji i da se uradi cela mehanika njihova
+
