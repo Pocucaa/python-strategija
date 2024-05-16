@@ -1,5 +1,0 @@
-STARTpassive
-
-ENDpassive
-
-ONHITpassive
