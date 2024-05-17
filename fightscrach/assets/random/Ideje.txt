@@ -70,7 +70,7 @@ combo:
 
 snajper 3 -------------
 
-passive, if adjecent enemy, change to shotgun 
+passive, if  enemy in 2 range, change to shotgun 
 (sniper: infinite range, 30% crit chance, 20% crit daamge)
 (shotgun: 2 tile range, +66% damage on first tile, knockback 1)
 

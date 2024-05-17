@@ -1,7 +1,6 @@
 import pygame, sys  
 
-character_position = [190, 160]
-character_position1 = [230, 180]
+
 
 # ------------------------------------------------------------------------------------------------------------------------------------
 
@@ -40,8 +39,8 @@ class Character:
     def __init__(self, spritesheet_path, num_frames, animation_speed=0.1):
         self.spritesheet = pygame.image.load(spritesheet_path)
         self.num_frames = num_frames
-        self.frame_width = self.spritesheet.get_width() // num_frames
-        self.frame_height = self.spritesheet.get_height()
+        self.frame_width = self.spritesheet.get_width() // num_frames 
+        self.frame_height = self.spritesheet.get_height() # kad imas vise redova prosiri
         self.current_frame = 0
         self.animation_speed = animation_speed  # Adjust as needed
         self.animation_timer = 0
@@ -61,11 +60,11 @@ class Character:
         resized_frame_surface = pygame.transform.scale(frame_surface, (character_sprite_size, character_sprite_size))
         surface.blit(resized_frame_surface, (x, y))
 
-    def position(self, x, y):
-        character_position = [260, 170]
-        character_position1 = [240, 180]
+    def position(self, pos_x, pos_y):
+        self.char_position = [pos_x, pos_y]
 
 # ------------------------------------------------------------------------------------------------------------------------------------ 
+
 
 # hp 
 # at 

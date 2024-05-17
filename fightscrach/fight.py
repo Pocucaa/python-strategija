@@ -11,6 +11,7 @@ def main():
     screen_width = 1280                                                                          
     screen_height = 720    
     window = pygame.display.set_mode((screen_width, screen_height))     
+    pygame.event.set_grab(True)  # Grab the mouse cursor
 # ------------------------------------------------------------------------------------------------------------------------------------  setup                                          
     play = True                                                                                    
     clock = pygame.time.Clock()
@@ -27,9 +28,10 @@ def main():
     character_sprite = Character("assets/likovi/mumijalik_2.png", 5)
     character_sprite1 = Character("assets/likovi/crni_vitez_idle.png", 4, animation_speed=0.1)
 # ------------------------------------------------------------------------------------------------------------------------------------
-    pygame.event.set_grab(True)  # Grab the mouse cursor
+
 
 # Create instances of CameraGroup and Player
+
     # camera_group = CameraGroup()
 
 
@@ -58,7 +60,7 @@ def main():
         dt = clock.tick(60) / 1000  # Convert milliseconds to second /// promeniti mozda na milisekunde zbog laga, videcemo
 
         redraw(window, screen_width, screen_height, rows, mouse_pos, character_sprite, character_sprite1, top_inactive_zone, left_inactive_zone, tile_size)
-        
+
         character_sprite.update(dt)
         character_sprite1.update(dt)
 

@@ -1,5 +1,6 @@
 import pygame
 from utilities import *
+from CharacterUtilities import Character
 
 character_position = [260, 170]
 character_position1 = [240, 180]
@@ -31,6 +32,10 @@ def redraw(window, width, height, rows, mouse_pos, character_sprite, character_s
     mouse_tile_y = (mouse_pos[1] - top_zone) // tile_size
 
     # Blit the character sprite onto the window
+
+    # character_sprite.position = []
+    # character_sprite1.position = []
+
 
     character_sprite.draw(window, character_position[0], character_position[1], character_sprite_size)
     character_sprite1.draw(window, character_position1[0], character_position1[1], character_sprite_size1)
