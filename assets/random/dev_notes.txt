@@ -1,5 +1,22 @@
 imas u samplu za mainmenu foru za fontove...
 
+
+provali vektore, trebace ti za karaktere
+self argument je u sustini sta god stavis, klasu itd
+iz camera1 uzmi random foru za stvaranje random objekata na battlefieldu
+window = pygame.display.get_surface()  # Get the display surface where the game is rendered
+
+u main menuu opcije i u borbi isto da se importuju, da moze da se namestaju keyinput
+
+za pasive napravi passiv fajl, gde imas passive funkcije za svaku akciju: onhitpassive, endturnpassive itd...
+za udarac pre udarca pogledas on hit passive, ili posle sta god, ubacis argument ime, i trazis po imenu koristeci if funkciju.
+
+u informacijama imas foru za flip i update, lag se moze smanjiti ako ne updajtujes ceo screen, nego zasebno updajtujes sta treba
+
+
+pygame je ekstenzija na pajton, neko dodo ono sto trepa i skratio posao, pogle kad skontas to al proveri da li je to bebina igrica za kompanije i ozbiljne ljude, mozda je poblje da sto vise moguce koristis pajton!
+
+
 kad umres pusti kako si majko kako si oce
 
 napravimo hp bar da bude krug i da ne pise koliko helta

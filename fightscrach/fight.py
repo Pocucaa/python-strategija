@@ -1,6 +1,8 @@
 import pygame, sys
 from grid import *
 from utilities import *
+from CharacterUtilities import *
+
 
 #!!!!!!!!!!!!!!!!!!!! promenjeni fajlovi: ideje, dev_notes, informacije, fight ( informacije u fajlovima )
 
@@ -28,7 +30,7 @@ def main():
     pygame.event.set_grab(True)  # Grab the mouse cursor
 
 # Create instances of CameraGroup and Player
-    camera_group = CameraGroup()
+    # camera_group = CameraGroup()
 
 
 
@@ -46,17 +48,17 @@ def main():
                 pygame.quit()
                 sys.exit()
 
-        if event.type == pygame.MOUSEWHEEL:
-            camera_group.zoom_scale += event.y * 0.03   
-            if camera_group.zoom_scale >= 3:
-                camera_group.zoom_scale = 3
-            if camera_group.zoom_scale <= 0.1:
-                camera_group.zoom_scale = 0.1                                 
+        # if event.type == pygame.MOUSEWHEEL:
+        #     camera_group.zoom_scale += event.y * 0.03   
+        #     if camera_group.zoom_scale >= 3:
+        #         camera_group.zoom_scale = 3
+        #     if camera_group.zoom_scale <= 0.1:
+        #         camera_group.zoom_scale = 0.1                                 
 
         dt = clock.tick(60) / 1000  # Convert milliseconds to second /// promeniti mozda na milisekunde zbog laga, videcemo
 
         redraw(window, screen_width, screen_height, rows, mouse_pos, character_sprite, character_sprite1, top_inactive_zone, left_inactive_zone, tile_size)
-
+        
         character_sprite.update(dt)
         character_sprite1.update(dt)
 

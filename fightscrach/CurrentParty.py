@@ -1,7 +1,12 @@
 from CharacterUtilities import *
 
-player_team = [mercenary1, mercenary2, mercenary11, mercenary22]
-enemy_team = [mercenary1, mercenary2, mercenary11, mercenary22]
+
+player_team = [
+    mercenary1, mercenary2, 
+    # mercenary3, mercenary4, mercenary5, 
+    # mercenary6, mercenary7, mercenary8, mercenary9, mercenary10
+    ]
+
 
 
 

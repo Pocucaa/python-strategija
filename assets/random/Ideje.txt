@@ -527,6 +527,7 @@ passive, attack apply 2 burn, gain 10% damage block
 1. 
 
 2.
+
 3.
 ------------------------
 izgoreo ceo (elite) (4)

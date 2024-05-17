@@ -1,6 +1,9 @@
+import pygame, sys  
 
 character_position = [190, 160]
 character_position1 = [230, 180]
+
+# ------------------------------------------------------------------------------------------------------------------------------------
 
 class Mercenary:
     def __init__(self, name, hp, at, mana, mv):
@@ -30,10 +33,39 @@ class Mercenary:
 
 mercenary1 = Mercenary(name="Mercenary1", hp=120, at=8, mana=80, mv=6)
 mercenary2 = Mercenary(name="Mercenarythorns", hp=180, at=14, mana=40, mv=4)
-mercenary11 = Mercenary(name="Mercenary11", hp=121, at=9, mana=81, mv=6)
-mercenary22 = Mercenary(name="Mercenary22", hp=182, at=14, mana=42, mv=4)
 
+# ------------------------------------------------------------------------------------------------------------------------------------ 
 
+class Character:
+    def __init__(self, spritesheet_path, num_frames, animation_speed=0.1):
+        self.spritesheet = pygame.image.load(spritesheet_path)
+        self.num_frames = num_frames
+        self.frame_width = self.spritesheet.get_width() // num_frames
+        self.frame_height = self.spritesheet.get_height()
+        self.current_frame = 0
+        self.animation_speed = animation_speed  # Adjust as needed
+        self.animation_timer = 0
+        self.frames_to_skip = 5 - num_frames
+    
+    def update(self, dt):
+        self.animation_timer += dt
+        if self.animation_timer >= self.animation_speed:
+            self.current_frame = (self.current_frame + 1) % self.num_frames
+            self.animation_timer = 0
+            if self.current_frame >= self.num_frames - self.frames_to_skip:
+                self.current_frame = 0
+
+    def draw(self, surface, x, y, character_sprite_size):
+        frame_rect = pygame.Rect(self.current_frame * self.frame_width, 0, self.frame_width, self.frame_height)
+        frame_surface = self.spritesheet.subsurface(frame_rect)
+        resized_frame_surface = pygame.transform.scale(frame_surface, (character_sprite_size, character_sprite_size))
+        surface.blit(resized_frame_surface, (x, y))
+
+    def position(self, x, y):
+        character_position = [260, 170]
+        character_position1 = [240, 180]
+
+# ------------------------------------------------------------------------------------------------------------------------------------ 
 
 # hp 
 # at 
