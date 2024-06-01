@@ -13,28 +13,6 @@ pygame.display.set_caption("Custom Print Display")
 font = pygame.font.Font(None, 36)
 text_color = (255, 255, 255)
 background_color = (0, 0, 0)
-
-# Custom print function
-output_lines = []
-
-def custom_print(*args, **kwargs):
-    text = ' '.join(map(str, args))
-    output_lines.append(text)
-    if len(output_lines) > 200:  # Keep only the last 200 lines
-        output_lines.pop(0)
-
-# Replace the built-in print with the custom print
-print = custom_print
-
-# Function to render text on the Pygame window
-def render_text(surface):
-    surface.fill(background_color)
-    y_offset = 10
-    for line in output_lines:
-        text_surface = font.render(line, True, text_color)
-        surface.blit(text_surface, (10, y_offset))
-        y_offset += 40
-
 # -----------------------------------------------
 
 # Main loop
@@ -52,11 +30,10 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-    render_text(screen)
     clock.tick(60)
 
 # -----------------------------------------------
-    action = 4
+    action = 3
     Fight_start(player_team, enemy_team, action)
     break
     

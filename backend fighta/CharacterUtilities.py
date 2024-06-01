@@ -4,7 +4,7 @@ import random
 # ------------------------------------------------------------------------------------------------------------------------------------
 
 class Mercenary:
-    def __init__(self, name, hp, at, mana, mv, sp):
+    def __init__(self, name, hp, at, mana, mv, sp, shield):
         self.name = name
         self.hp = hp  # Hit Points
         self.at = at  # Attack
@@ -13,7 +13,7 @@ class Mercenary:
         self.sp = sp
         self.position = 0
         self.alive = 1
-        # self.shield = shield
+        self.shield = shield
         # self.startx = startx
         # self.starty = starty
         # self.x = x  # Starting x position

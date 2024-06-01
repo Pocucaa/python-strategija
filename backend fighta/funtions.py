@@ -19,7 +19,7 @@ def attack(self, target):
 
 
 def defend(self):
-    self.shield += self.hp * 0.05
+    self.shield += self.hp * 0.1
 
 # def use_spell(self):
 # def use item
@@ -37,14 +37,51 @@ def defend(self):
 # ------------------------------------------------------------------------------------------------------------------------------------ 
 
 def assign_positions(mercenaries):
-    # Sort the mercenaries based on speed in descending order
+
     sorted_mercenaries = sorted(mercenaries, key=lambda merc: merc.sp, reverse=True)
 
-    # Assign positions from 1 to 10
     for i, merc in enumerate(sorted_mercenaries):
         merc.position = i + 1
 
     return sorted_mercenaries
+
+
+def assign_positions(teams):
+  """
+  Sorts mercenaries by speed in descending order for each team in the provided list of teams.
+  Assigns positions from 1 to the number of mercenaries in each team.
+
+  Args:
+      teams: A list containing lists of mercenaries (representing teams).
+
+  Returns:
+      A list containing the sorted and positioned teams.
+  """
+
+  sorted_teams = []
+  for team in teams:
+    sorted_team = sorted(team, key=lambda merc: merc.sp, reverse=True)
+    for i, merc in enumerate(sorted_team):
+      merc.position = i + 1
+    sorted_teams.append(sorted_team)
+
+  return sorted_teams
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 def update_positions(mercenaries):
