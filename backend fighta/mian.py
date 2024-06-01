@@ -1,5 +1,5 @@
 import pygame, sys
-from CharacterUtilities import *
+from fightt import *
 
 # Initialize Pygame
 pygame.init()
@@ -20,7 +20,7 @@ output_lines = []
 def custom_print(*args, **kwargs):
     text = ' '.join(map(str, args))
     output_lines.append(text)
-    if len(output_lines) > 200:  # Keep only the last 20 lines
+    if len(output_lines) > 200:  # Keep only the last 200 lines
         output_lines.pop(0)
 
 # Replace the built-in print with the custom print
@@ -35,6 +35,8 @@ def render_text(surface):
         surface.blit(text_surface, (10, y_offset))
         y_offset += 40
 
+# -----------------------------------------------
+
 # Main loop
 running = True
 clock = pygame.time.Clock()
@@ -42,6 +44,8 @@ clock = pygame.time.Clock()
 print("This is a test print statement.")
 print("Another line to display.")
 print("Hello, Pygame!")
+
+# -----------------------------------------------
 
 while running:
     for event in pygame.event.get():
@@ -51,7 +55,12 @@ while running:
     render_text(screen)
     clock.tick(60)
 
+# -----------------------------------------------
+    action = 4
+    Fight_start(player_team, enemy_team, action)
+    break
     
+# -----------------------------------------------
     pygame.display.flip()
 
 pygame.quit()

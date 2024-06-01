@@ -1,19 +1,20 @@
 from CharacterUtilities import *
 
-
+# placeholder za mercenariej koje ces vuci iz fajla
 mercenary1 = Mercenary(name="Mercenary1", hp=120, at=8, mana=80, mv=6, sp=5)
-mercenary2 = Mercenary(name="Mercenarythorns", hp=180, at=14, mana=40, mv=4, sp=4)
+mercenary2 = Mercenary(name="Mercenarythorns", hp=180, at=14, mana=40, mv=4, sp=3)
+mercenary3 = Mercenary(name="Mercenaryfast", hp=100, at=10, mana=60, mv=8, sp=9)
 
 
 # ------------------------------------------------------------------------------------------------------------------------------------ 
 player_team = [
-    mercenary1, mercenary2, 
-    # mercenary3, mercenary4, mercenary5, 
+    mercenary1, mercenary2, mercenary3,
+    # mercenary4, mercenary5, 
     # mercenary6, mercenary7, mercenary8, mercenary9, mercenary10
     ]
 # ------------------------------------------------------------------------------------------------------------------------------------ 
 
-
+enemy_team = [ mercenary1, mercenary2, mercenary3 ]
 
 
 
