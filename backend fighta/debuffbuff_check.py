@@ -29,5 +29,34 @@
 
 
 # Define functions for checking passive effects and debuffs (you'll need to implement these)
-def check_passive_effects(self):
-    ''''''
+
+
+class Buff:
+    def __init__(self, name, duration, modifiers):
+        self.name = name
+        self.duration = duration
+        self.modifiers = modifiers  # Dictionary of stat changes (e.g., {"damage": 0.2, "accuracy": 0.1})
+
+class Debuff:
+    def __init__(self, name, duration, effects):
+        self.name = name
+        self.duration = duration
+        self.effects = effects  # List of functions to apply during the debuff (e.g., reduce_speed)
+
+
+def apply_buff(mercenary, buff):
+    mercenary.active_buffs.append(buff)
+
+def apply_debuff(mercenary, debuff):
+    mercenary.active_debuffs.append(debuff)
+
+def apply_regeneration_buff(mercenary, duration):
+    buff = RegenerationBuff(duration)
+    apply_buff(mercenary, buff)
+
+class RegenerationBuff(Buff):
+    def __init__(self, duration):
+        super().__init__("Regeneration", duration, {})  # No initial modifiers
+
+    def on_turn_end(self, mercenary):
+        mercenary.heal(2)  # Heal 2 MHP at the end of the turn

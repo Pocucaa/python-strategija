@@ -1,24 +1,7 @@
 import pygame, sys  # Import the pygame library for game development and sys module for system-specific parameters and functions
 from random import randint  # Import the randint function from the random module
 
-# Define a class for the Tree sprite
-class Tree(pygame.sprite.Sprite):
-    def __init__(self,pos,group):  # Constructor method, initializes the Tree object
-        super().__init__(group)  # Call the superclass constructor
-        self.image = pygame.image.load('graphics/tree.png').convert_alpha()  # Load the tree image with transparency
-        self.rect = self.image.get_rect(topleft = pos)  # Get the rectangle that encloses the image and set its top-left position
-
-# Define a class for the Player sprite
-class Player(pygame.sprite.Sprite):
-    def __init__(self,pos,group):  # Constructor method, initializes the Player object
-        super().__init__(group)  # Call the superclass constructor
-        self.image = pygame.image.load('graphics/player.png').convert_alpha()  # Load the player image with transparency
-        self.rect = self.image.get_rect(center = pos)  # Get the rectangle that encloses the image and set its center position
-        self.direction = pygame.math.Vector2()  # Create a vector to store the player's movement direction
-        self.speed = 5  # Set the player's movement speed
-
-    # Method to handle player input
-    def input(self):
+def input(self):
         keys = pygame.key.get_pressed()  # Get the state of all keyboard keys
 
         if keys[pygame.K_UP]:  # If the up arrow key is pressed
@@ -36,7 +19,7 @@ class Player(pygame.sprite.Sprite):
             self.direction.x = 0  # Otherwise, set the x-component of the movement direction vector to 0
 
     # Method to update the player's position based on input
-    def update(self):
+def update(self):
         self.input()  # Call the input method to handle player input
         self.rect.center += self.direction * self.speed  # Move the player's rectangle based on the direction vector and speed
 
@@ -191,13 +174,7 @@ pygame.event.set_grab(True)  # Grab the mouse cursor
 
 # Create instances of CameraGroup and Player
 camera_group = CameraGroup()
-player = Player((640,360),camera_group)
 
-# Create trees at random positions and add them to the CameraGroup
-for i in range(20):
-    random_x = randint(1000,2000)
-    random_y = randint(1000,2000)
-    Tree((random_x,random_y),camera_group)
 
 # Main game loop
 while True:
@@ -216,7 +193,6 @@ while True:
     screen.fill('#71ddee')  # Fill the screen with a sky blue color
 
     camera_group.update()  # Update the camera
-    camera_group.custom_draw(player)  # Draw the scene with custom camera settings
 
     pygame.display.update()  # Update the display
     clock.tick(60)  # Cap the frame rate at 60 frames per second

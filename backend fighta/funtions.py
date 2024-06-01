@@ -17,9 +17,17 @@ def attack(self, target):
         # onhit passive
         # crit
 
-
 def defend(self):
     self.shield += self.hp * 0.1
+
+def heal(self, amount):
+    if self.hp + amount > self.maxhp:
+        self.hp = self.maxhp  # Prevent overhealing
+    else:
+        self.hp += amount
+
+# --> koji mercenari --> mercenary.heal(10)
+
 
 # def use_spell(self):
 # def use item
@@ -36,42 +44,40 @@ def defend(self):
 
 # ------------------------------------------------------------------------------------------------------------------------------------ 
 
-def assign_positions(mercenaries):
 
-    sorted_mercenaries = sorted(mercenaries, key=lambda merc: merc.sp, reverse=True)
+# def Fight_start(player_team, enemy_team, action):
 
-    for i, merc in enumerate(sorted_mercenaries):
-        merc.position = i + 1
+#     all_mercenaries = deque(player_team + enemy_team)
+#     all_mercenaries.sort(key=lambda merc: merc.sp, reverse=True)
 
-    return sorted_mercenaries
+#     while all_mercenaries:                                  # gotovo kad prodje kroz sve i prodje 1 ciklus
+#         current_merc = all_mercenaries.popleft()
 
+#         # Apply buffs at the end of the turn (assuming your turn logic progresses through this loop)
+#         for buff in current_merc.active_buffs:
+#             if buff.__class__ == RegenerationBuff:  # Check for RegenerationBuff
+#                 buff.on_turn_end(current_merc)  # Call the specific on_turn_end method
 
-def assign_positions(teams):
-  """
-  Sorts mercenaries by speed in descending order for each team in the provided list of teams.
-  Assigns positions from 1 to the number of mercenaries in each team.
+#         # Your action logic (attack, defend, spell) based on chosen action (action == 4, 3, or 5)
+#         if action == 1:
+#             attack(current_merc, select_target(current_merc, enemy_team))  # Replace with target selection logic
+#             print(f" HP = {current_merc.target.hp}")  # Assuming target has hp attribute
+#         elif action == 2:
+#             defend(current_merc)
+#             print(f"SHIELD = {current_merc.shield}")
+#         elif action == 4:
+#             spell1(current_merc, select_target(current_merc, enemy_team))  # Replace with target selection logic
 
-  Args:
-      teams: A list containing lists of mercenaries (representing teams).
-
-  Returns:
-      A list containing the sorted and positioned teams.
-  """
-
-  sorted_teams = []
-  for team in teams:
-    sorted_team = sorted(team, key=lambda merc: merc.sp, reverse=True)
-    for i, merc in enumerate(sorted_team):
-      merc.position = i + 1
-    sorted_teams.append(sorted_team)
-
-  return sorted_teams
+#     # All turns completed
+#     print("All turns finished!")
 
 
 
-
-
-
+# # Example target selection function (replace with your actual logic)
+# def select_target(mercenary, enemy_team):
+#     # Implement logic to choose a target from the enemy team (e.g., weakest enemy)
+#     # This is a placeholder, replace with your desired target selection strategy
+#     return enemy_team[0]
 
 
 
@@ -84,28 +90,8 @@ def assign_positions(teams):
 
 
 
-def update_positions(mercenaries):
-    while True:
-        # Sort and assign positions
-        sorted_mercenaries = assign_positions(mercenaries)
-        
-        # Print the sorted mercenaries with their positions
-        for merc in sorted_mercenaries:
-            print(merc)
-        
-        # Increment position for the next iteration
-        for merc in mercenaries:
-            merc.sp += 1
-        
-        # Break after one iteration for demonstration
-        break
-
-# Example usage
 
 
-# ------------------------------------------------------------------------------------------------------------------------------------
-
-# update_positions(mercenaries)
 
 
 

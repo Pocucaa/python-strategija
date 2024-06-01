@@ -25,14 +25,14 @@ combo: 3x3, +53 poison, stun 1
 
 wing-chun baja ----------
 ap range 1
-passiv, manji damage ima, 3 udarca udara, onhit 20ap
+passiv, manji damage ima, 2 udarca udara, onhit 10ap
 
 1. chain punches 
 attack 7 times
 combo: attack 11 times, and then once with +66% ap
 
 2. toggle / enter stance
-enter defensive stance, retaliate, 20% block, 20% misschance, cant move
+enter defensive stance, retaliate, 20% block, cant move
 combo: enter divinity 5
 
 3. meditate (0 mana)
@@ -71,7 +71,7 @@ combo:
 snajper 3 -------------
 
 passive, if  enemy in 2 range, change to shotgun 
-(sniper: infinite range, 30% crit chance, 20% crit daamge)
+(sniper: infinite range, 30% crit chance, -20% crit daamge)
 (shotgun: 2 tile range, +66% damage on first tile, knockback 1)
 
 1.
@@ -154,7 +154,7 @@ combo: next 3 attack, stun 1 turn at end
 teleport range 3 
 or on ally give 20% lifesteal 3 turns
 combo:
-7 range tp, + 80% damage on text attack to ally 
+7 range tp, aura skill
 
 --------------------
 speed
@@ -169,7 +169,7 @@ combo: deal 4.3x times the charges, decharge 70% charges
 move + 6mv, +43 charge 
 combo: move +8, supercharge 128
 
-3. speed punches
+3. speed zaps
 attack 5 times with 0.4 deal 0.3x charges damage, decharge 25
 combo: 9x attack, decharge 30% + 30
 -------------------
@@ -244,7 +244,7 @@ summon 2/3 snakes, low unit, applies passive
 combo: summon 4/5 snakes, chance for mid tier snake 30%
 
 -----------------------
-nanomen (long range)
+nanomen (infinit range) nema manu
 
 passive, spawn 1 nanobot at the end of your turn, max 6 nanobots, nanobots increase damage
 
@@ -326,18 +326,18 @@ e sad pazi:
 120 stakova - spell imunity 
 150 stakova - - 4mv, crit deals 3x damage, evassines 40% 
 180 stakova - sleeps i popije kisele, skip next turn, heal 70% hp, 3 turns mamurluk, take small damage
-190 stakova - each attack adds 1 drunken stack, target attacked is stuned, 100% crit 70% crit damage
+190 stakova - each attack adds 2 drunken stack, target attacked is stuned, 100% crit 70% crit damage
 
 1. pivo
 Y( + random offset) pijan, 33% damageblock 4 turns, 2 1.3x attacks, second 66% bonus damage, 1 stun
 combo: naex (veci pijan buff), gain drunk euphoria 3 turns ( 33% more damage, 10% evassines, 10% crit chance, small regen), bonus 40% damage on spell, 2 turn stun
 
 2. rakija
-combo: pijan (veci od q), 33% damage 4 turns, evade next 2 attacks, next 2 attacks twice, spit, 3 turn weakness 
+combo: pijan (veci od q), hila , evade next 2 attacks, next 2 attacks twice, spit, 3 turn weakness 
 combo: naex, polupa flasu o glavu, - mali hp, 4 turna + 1 range, 33% attack, apply 2 turn bleed, 3 turns euphoria
 
 3. vinjak
-combo: pijan (malo manji od rakije), 4 mana heal 4 turns, sings, 5 tile range debuff, -20% hit chance; weakened; for 3 turns, deals fixed damage
+combo: pijan (malo manji od rakije), dobija pojzin ali dila veci damae, sings, 5 tile range debuff, -20% hit chance; weakened; for 3 turns, deals fixed damage
 combo: naex, baca pikslu, 4 range attack, deals 3.2x damage stuns 1, 3 turns euphoria, restore 16 mana 
 
 ----------------------
@@ -414,7 +414,7 @@ combo: heal 2 closests ally, bigger heal and mana, give 1 combo
 ---------------------------
 teleporter (4 range)
 
-passive, teleports insted of walking, after teleportation gain 33% first stepll amp, stacks
+passive, teleports insted of walking, after teleportation gain 11% first stepll amp, stacks
 
 1. damage
 teleport 2, then attack 1 enemy in 4 tiles, if not, regain mana
@@ -427,15 +427,15 @@ combo: teleport 7 tiles, bigger damage, blind 2 turn
 
 
 3. 
-teleport 3 ally, then give him 1 damage block, and your passive
-combo: give 3 passives, teleport 6, 2 block
+teleport ally, then give him 1 damage block, and your passive
+combo: give bigger passive, 3 allyes,, teleport 6, 2 block
 --------------------------
 wolf (meelee)
-
-passive, attacks apply stacking bleed, 3 wolfs, if in 4 tiles gain 33% attack
+sheruju helte
+passive, attacks apply stacking 2 bleed, 3 wolfs, if in 4 tiles gain 33% attack
 
 1. howl
-howl, gain team stacking 10% attack, 1mv, for 3 turns
+howl, gain team stacking 10% attack, 1mv, for 1 turns
 combo: all wolfs howl, gain 33% to all wolfes on next attack and apply double passive
 
 2. 
@@ -464,7 +464,7 @@ combo: euphoria 5, 3 combo points, double heal
 
 ------------------------
 4 crowos *
-
+shared pool
 passive, 2 tiles aura, 10% misschance, 10% more attack damage, not stacking, low hp high mv
 
 1. crow gawk
@@ -479,7 +479,7 @@ combo: give double bonus damage, guarantee crit
 crow 
 ------------------------
 hunter *
- 
+
 passive, start with 1 crow
 
 ------------------------
@@ -653,7 +653,7 @@ Root target 2 turns, 33% damage, 3x onhit damage
 Combo: attack twice, +1 range, deal additional 130% damage if rooted, add 2 turns to root
 
 2. Tree
-Creates a tree for 3 turns, 2 tiles aura, 30% heal amp, can be clicked to mid heal
+Creates a tree for 3 turns, 2 tiles aura, 30% heal amp, end turn heal
 Combo: 2x2 tree, 5 tiles aura, 40% heal amp, bigger heal when clicked
 
 3. Thorns
@@ -842,3 +842,65 @@ combo: give 5 regen, 1 more closest target, 15% heal
 3. blind (cant attack)
 blind 2, deal 33% ap
 combo: blind every enemy for 1 turn, deal 66% ap
+
+
+van helsing ----------
+
+passiv roka undedove, silverboldtovi, ako je flegovan kao evil, vampir debufo nemoze se hila bla bla
+
+
+1. sekira ako su blizu slow damage
+combo: 
+
+2. vukodlak, 
+combo, pretvorio si njega u vuka
+
+3. lazno te optuzi
+optuzite, postajes evil
+combo: sledeci udarac garantovan krit sa bonus demidzom
+
+
+puzzle lik
+
+lik sa statuama kamene statue
+
+lik sa kamenom
+
+knockback mehanika
+
+1. prizovi kamen
+combo; privuce gurne , gurnes kamen udari lika koji si gurnuo
+2. push
+
+3. pull
+
+
+
+shaman
+
+passiv master of elements, abilites combo eachother
+ruka protektuje alaja
+
+munja + voda -> stan 1
+munja + zemlja -> aoe
+munja + vatra --> root
+munja + led --> razori zid stvori male ledena sranja svuda po mapi 1x1 
+
+voda + zemlja --> bilje heal aoe
+vodu + vatru --> blind
+
+zemlja + led --> pomeri zid ili oblikujes
+
+vetra + vatra --> spali iza pozar
+
+1. lightning zap chain
+combo: vetar knockback 2 cela mapa
+2. voda gejzir bara
+combo: led wall 
+3. zemlja ruka
+combo: vatra pozar
+
+
+voda led lik
+
+summoner koji koristi objekte kao summoner unite

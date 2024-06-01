@@ -4,16 +4,27 @@ import random
 # ------------------------------------------------------------------------------------------------------------------------------------
 
 class Mercenary:
-    def __init__(self, name, hp, at, mana, mv, sp, shield):
+    def __init__(self, name, maxhp, hp, at, mana, mv, sp, shield):
         self.name = name
-        self.hp = hp  # Hit Points
-        self.at = at  # Attack
-        self.mana = mana  # Mana
-        self.mv = mv  # Movement
-        self.sp = sp
+        self.maxhp = int(round(maxhp))  # Round maxhp to whole number
+        self.hp = int(round(hp))        # Round hp to whole number
+        self.at = int(round(at))        # Round at to whole number
+        self.mana = int(round(mana))    # Round mana to whole number
+        self.mv = int(round(mv))        # Round mv to whole number
+        self.sp = int(round(sp))        # Round sp to whole number
+        self.shield = int(round(shield))  # Round shield to whole number
         self.position = 0
         self.alive = 1
-        self.shield = shield
+        self.buffs = []
+        self.debuffs = []
+
+
+
+
+
+
+# ------------------------------------------------------------------------------------------------------------------------------------
+
         # self.startx = startx
         # self.starty = starty
         # self.x = x  # Starting x position
@@ -24,10 +35,7 @@ class Mercenary:
         # self.ev =
         # self.mb
         # self.pb
-
-
-# ------------------------------------------------------------------------------------------------------------------------------------
-
+        
 # hp 
 # at 
 # mn 

@@ -1,6 +1,6 @@
 import pygame
 from utilities_gamestart import *
-from grid2 import main
+# from grid2 import main
 
 
 

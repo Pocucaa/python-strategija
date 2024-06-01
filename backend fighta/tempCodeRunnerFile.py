@@ -1,2 +1,52 @@
+import pygame, sys
+from fightt import *
 
-    tile_size = 25 # radi na 20 i 50        
+# Initialize Pygame
+pygame.init()
+
+# Set up the display
+width, height = 800, 600
+screen = pygame.display.set_mode((width, height))
+pygame.display.set_caption("Tatakae")
+
+# Set up font
+font = pygame.font.Font(None, 36)
+text_color = (255, 255, 255)
+background_color = (0, 0, 0)
+# -----------------------------------------------
+
+# Main loop
+running = True
+clock = pygame.time.Clock()
+
+action_keys = {
+    pygame.K_a: 1,  # Attack (action = 1)
+    pygame.K_s: 2,  # Defend (action = 2)
+    pygame.K_d: 4,  # Spell (action = 4)
+    # You can add more keys for other actions
+}
+
+player_team = []
+enemy_team = []
+
+# -----------------------------------------------
+
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+        elif event.type == pygame.KEYDOWN:
+            if event.key in action_keys:
+                action = action_keys[event.key]
+                Fight_start(player_team, enemy_team, action)
+                break  
+
+    clock.tick(60)
+
+# -----------------------------------------------
+
+    pygame.display.flip()
+
+pygame.quit()
+sys.exit()

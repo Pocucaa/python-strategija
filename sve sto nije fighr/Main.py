@@ -1,6 +1,6 @@
 import pygame, sys
 from button import Button
-from Fight import main
+# from Fight import main
 
 
 pygame.init()
