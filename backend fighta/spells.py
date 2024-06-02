@@ -15,11 +15,13 @@
 
 from CharacterUtilities import *
 from CurrentParty import *
+from debuffbuff_check import *
 
 def spell1(self, target):
         if target.hp > 0:
             damage = self.at * 1.8
             target.hp -= int(round(damage))
+            target.apply_stun(2)  # Stun for 2 turns
 
         if target.hp < 0:
             target.alive == 0

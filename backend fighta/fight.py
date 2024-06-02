@@ -1,5 +1,5 @@
 from CharacterUtilities import *
-from funtions import *
+from functions import *
 from CurrentParty import *
 from debuffbuff_check import *
 from spells import *
@@ -20,11 +20,14 @@ def Fight_start(player_team, enemy_team, action):
 
     # while all_mercenaries:                                  # gotovo kad prodje kroz sve i prodje 1 ciklus
     #     current_merc = all_mercenaries.popleft()
+        # for mercenary in team:
+            # Check for stun
+        print(mercenary2.debuffs)
+        if any(buff["is_stunned"] == True for buff in mercenary2.debuffs):
+            print("STANOVAN JE")
 
-        # # Apply buffs at the end of the turn (assuming your turn logic progresses through this loop)
-        # for buff in current_merc.active_buffs:
-        #     if buff.__class__ == RegenerationBuff:  # Check for RegenerationBuff
-        #         buff.on_turn_end(current_merc)  # Call the specific on_turn_end method
+
+
 
         if action == 1:
             attack(mercenary1, mercenary2)  # Replace with target selection logic
@@ -38,6 +41,15 @@ def Fight_start(player_team, enemy_team, action):
             spell1(mercenary1, mercenary2)  # Replace with target selection logic
 
 
+
+
+def start_turn(self):
+        # Check for and apply debuffs at the start of the turn
+        for debuff in self.debuffs:
+            debuff.on_turn_start(self)
+            debuff.tick()
+            if debuff.is_expired():
+                self.debuffs.remove(debuff)
 
 
 # Example target selection function (replace with your actual logic)

@@ -18,18 +18,6 @@
 # regen: end of turn heal 3% hp
 
 
-# def Bleedcheck (bleed):
-#     if bleed == true:
-
-    # def RegenCheck (regen):
-    #     if regen == true:
-    #         mercenary.Hp =+ mercenary.HP + 
-    #     if regen == false:
-    #         skip
-
-
-# Define functions for checking passive effects and debuffs (you'll need to implement these)
-
 
 class Buff:
     def __init__(self, name, duration, modifiers):
@@ -44,19 +32,18 @@ class Debuff:
         self.effects = effects  # List of functions to apply during the debuff (e.g., reduce_speed)
 
 
-def apply_buff(mercenary, buff):
-    mercenary.active_buffs.append(buff)
+def apply_regen(self, duration):
+        # Heal amount is calculated as 2% of max HP
+    heal_amount = int(0.02 * self.maxhp)
+    self.apply_buff(duration, {"heal_amount": heal_amount})  # Apply buff with heal amount
 
-def apply_debuff(mercenary, debuff):
-    mercenary.active_debuffs.append(debuff)
+def apply_heal(self, heal_amount):
+        # Direct heal for the specified amount
+    self.hp = min(self.hp + heal_amount, self.maxhp)  # Ensure HP doesn't exceed max HP
 
-def apply_regeneration_buff(mercenary, duration):
-    buff = RegenerationBuff(duration)
-    apply_buff(mercenary, buff)
 
-class RegenerationBuff(Buff):
-    def __init__(self, duration):
-        super().__init__("Regeneration", duration, {})  # No initial modifiers
 
-    def on_turn_end(self, mercenary):
-        mercenary.heal(2)  # Heal 2 MHP at the end of the turn
+# fruits = ["apple", "banana"]
+# fruits.append("orange")
+
+# print(fruits)  # Output: ["apple", "banana", "orange"]

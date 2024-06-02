@@ -1,7 +1,7 @@
 import pygame, sys
-from fightt import *
+from fight import *
 
-# import ilkj
+# kretanje po mapi ilkj
 
 # Initialize Pygame
 pygame.init()
