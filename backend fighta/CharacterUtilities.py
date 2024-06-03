@@ -18,37 +18,18 @@ class Mercenary:
                 self.buffs = []
                 self.debuffs = []
 
-        def apply_buff(self, duration, effect):
-                # Check if an existing buff with the same effect exists
-                for buff in self.buffs:
-                        if buff["effect"] == effect:
-                        # Update duration of the existing buff
-                                buff["duration"] = duration
-                        return  # Exit the function after updating duration
+        def apply_stun_debuff(self, duration):
 
-                # Buff not found, add a new one
-                self.buffs.append({"duration": duration, "effect": effect})
-
-                
-        def apply_debuff(self, duration, effect):
-                # Check if an existing debuff with the same effect exists
+                already_stunned = False
                 for debuff in self.debuffs:
-                        if debuff["effect"] == effect:
-                        # Update duration of the existing debuff
-                                debuff["duration"] = duration
-                        return  # Exit the function after updating duration
+                        if "is_stunned" in debuff and debuff["is_stunned"]:
+                                already_stunned = True
+                                debuff["duration"] += duration  # Add duration if already stunned
+                                break
 
-                # Debuff not found, add a new one
-                self.debuffs.append({"duration": duration, "effect": effect})
-
-        def apply_stun(self, duration):
-                for debuff in self.debuffs:
-                        if debuff["effect"] == {"is_stunned": True}:
-                                debuff["duration"] += duration
-                        break  # Exit the loop after finding and updating the stun debuff
-                else:
-                        self.apply_debuff(duration, {"is_stunned": True})
-
+                        if not already_stunned:
+                                self.debuffs.append({"is_stunned": True, "duration": duration})
+                        
 
 # ------------------------------------------------------------------------------------------------------------------------------------
 

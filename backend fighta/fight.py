@@ -22,12 +22,12 @@ def Fight_start(player_team, enemy_team, action):
     #     current_merc = all_mercenaries.popleft()
         # for mercenary in team:
             # Check for stun
+
         print(mercenary2.debuffs)
-        if any(buff["is_stunned"] == True for buff in mercenary2.debuffs):
-            print("STANOVAN JE")
 
-
-
+        # Check for stun debuff (assuming "is_stunned" key is used)
+        if any(debuff["is_stunned"] for debuff in mercenary2.debuffs):
+            print(f"{mercenary2.name} is stunned and cannot act!")
 
         if action == 1:
             attack(mercenary1, mercenary2)  # Replace with target selection logic

@@ -21,10 +21,10 @@ def spell1(self, target):
         if target.hp > 0:
             damage = self.at * 1.8
             target.hp -= int(round(damage))
-            target.apply_stun(2)  # Stun for 2 turns
+            target.apply_stun_debuff(2)
 
         if target.hp < 0:
-            target.alive == 0
+            target.alive = 0
         # pokreni smrt funckiju
 
         if target.hp > 0:

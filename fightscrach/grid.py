@@ -23,7 +23,7 @@ def redraw(window, width, height, rows, mouse_pos,  mumija_idle, vitez_idle, top
     interactive_screen(window, width, height, top_zone)    # dodati da ne svetli ovde
 
     character_position = [
-        left_zone + (tile_size / 22),
+        left_zone + vitez_idle.frame_width,
         top_zone + (tile_size / 2)
     ]
     character_position1 = [
