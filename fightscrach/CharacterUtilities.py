@@ -1,7 +1,5 @@
 import pygame, sys  
 
-
-
 # ------------------------------------------------------------------------------------------------------------------------------------
 
 class Mercenary:
@@ -23,13 +21,6 @@ class Mercenary:
         # self.mb
         # self.pb
 
-    def attack(self, target):
-        target.hp -= self.at
-        # onhit passive
-        # crit
-
-    # def move(self, mv, position):
-
 mercenary1 = Mercenary(name="Mercenary1", hp=120, at=8, mana=80, mv=6)
 mercenary2 = Mercenary(name="Mercenarythorns", hp=180, at=14, mana=40, mv=4)
 
@@ -44,7 +35,7 @@ class Character:
         self.current_frame = 0
         self.animation_speed = animation_speed  # Adjust as needed
         self.animation_timer = 0
-        self.frames_to_skip = 5 - num_frames
+        self.frames_to_skip = 4 - num_frames
     
     def update(self, dt):
         self.animation_timer += dt

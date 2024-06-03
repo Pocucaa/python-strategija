@@ -22,11 +22,13 @@ def main():
     top_inactive_zone = int(screen_height * top_inactive_precent)
     left_inactive_zone = int(screen_width * left_inactive_precent)
 
-    tile_size = 25 # radi na 20 i 50                                                              
+    tile_size = 50 # radi na 20 i 50 i 25                                                             
     rows = int(screen_height - top_inactive_zone // tile_size)      
 
-    character_sprite = Character("assets/likovi/mumijalik_2.png", 5)
-    character_sprite1 = Character("assets/likovi/crni_vitez_idle.png", 4, animation_speed=0.1)
+    mumija_idle = Character("assets/likovi/mumijalik_2.png", 5)
+    vitez_idle = Character("assets/likovi/crni_vitez_idle.png", 4, animation_speed=0.2)
+    vitez_setnja = Character("assets/likovi/crni_vitez_walk.png", 6, animation_speed=0.1)
+    vitez_sprites = [vitez_idle, vitez_setnja]
 # ------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -59,10 +61,10 @@ def main():
 
         dt = clock.tick(60) / 1000  # Convert milliseconds to second /// promeniti mozda na milisekunde zbog laga, videcemo
 
-        redraw(window, screen_width, screen_height, rows, mouse_pos, character_sprite, character_sprite1, top_inactive_zone, left_inactive_zone, tile_size)
+        redraw(window, screen_width, screen_height, rows, mouse_pos, mumija_idle, vitez_idle, top_inactive_zone, left_inactive_zone, tile_size)
 
-        character_sprite.update(dt)
-        character_sprite1.update(dt)
+        mumija_idle.update(dt)
+        vitez_idle.update(dt)
 
         # camera_group.update()  # Update the camera
         # camera_group.custom_draw(window)  # Draw the scene with custom camera settings

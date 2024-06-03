@@ -2,8 +2,7 @@ import pygame
 from utilities import *
 from CharacterUtilities import Character
 
-character_position = [260, 170]
-character_position1 = [240, 180]
+
 
 
 def grid(window, width, height, rows, mouse_pos, top_zone, left_zone, tile_size):
@@ -18,28 +17,31 @@ def grid(window, width, height, rows, mouse_pos, top_zone, left_zone, tile_size)
         if y != 0 and y != height - top_zone and y != top_zone:
             pygame.draw.line(window, (0, 0, 0), (left_zone, y), (width - left_zone + offsetX, y))
 # ------------------------------------------------------------------------------------------------------------------------------------ 
-def redraw(window, width, height, rows, mouse_pos, character_sprite, character_sprite1, top_zone, left_zone, tile_size):
+def redraw(window, width, height, rows, mouse_pos,  mumija_idle, vitez_idle, top_zone, left_zone, tile_size):
     pozadina(width, height, top_zone, left_zone)
     grid(window, width, height, rows, mouse_pos, top_zone, left_zone, tile_size)
     interactive_screen(window, width, height, top_zone)    # dodati da ne svetli ovde
-    
-    offsetY = 5
+
+    character_position = [
+        left_zone + (tile_size / 22),
+        top_zone + (tile_size / 2)
+    ]
+    character_position1 = [
+        left_zone + (tile_size / 20),
+        top_zone + 5 * (tile_size / 2)              # za 2 se pomera tajl
+    ]
+
     # Calculate the position to blit the character sprite
-    character_sprite_size = int(tile_size * 1.1)
-    character_sprite_size1 = int(tile_size * 1.3)
+    mumija_idle_size = int(tile_size * 1.1)
+    vitez_idle_size = int(tile_size * 1.2)
 
     mouse_tile_x = (mouse_pos[0] - left_zone) // tile_size
     mouse_tile_y = (mouse_pos[1] - top_zone) // tile_size
 
-    # Blit the character sprite onto the window
+    mumija_idle.draw(window, character_position[0], character_position[1], mumija_idle_size)
+    vitez_idle.draw(window, character_position1[0], character_position1[1],vitez_idle_size)
 
-    # character_sprite.position = []
-    # character_sprite1.position = []
-
-
-    character_sprite.draw(window, character_position[0], character_position[1], character_sprite_size)
-    character_sprite1.draw(window, character_position1[0], character_position1[1], character_sprite_size1)
-
+    offsetY = 5
     # Check if the mouse position is within the boundaries of the tiles and make it glow
     if 0 <= mouse_tile_x < width and 0 <= mouse_tile_y < rows:
         if top_zone < mouse_pos[1] < height - top_zone - offsetY and top_zone < mouse_pos[1]:
