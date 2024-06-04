@@ -6,29 +6,24 @@ import random
 class Mercenary:
         def __init__(self, name, maxhp, hp, at, mana, mv, sp, shield):
                 self.name = name
-                self.maxhp = int(round(maxhp))  # Round maxhp to whole number
-                self.hp = int(round(hp))        # Round hp to whole number
-                self.at = int(round(at))        # Round at to whole number
-                self.mana = int(round(mana))    # Round mana to whole number
-                self.mv = int(round(mv))        # Round mv to whole number
-                self.sp = int(round(sp))        # Round sp to whole number
-                self.shield = int(round(shield))  # Round shield to whole number
+                self.maxhp = int(round(maxhp)) 
+                self.hp = int(round(hp))    
+                self.at = int(round(at))    
+                self.mana = int(round(mana))  
+                self.mv = int(round(mv))    
+                self.sp = int(round(sp))    
+                self.shield = int(round(shield))  
                 self.position = 0
                 self.alive = 1
                 self.buffs = []
                 self.debuffs = []
 
-        def apply_stun_debuff(self, duration):
+        def apply_debuff(self, duration):
+                if "is_stunned" in self.debuffs and self.debuffs["is_stunned"] is True:
+                        self.debuffs.append({"duration": duration})
+                else:
+                        self.debuffs.append({"is_stunned": True, "duration": duration})
 
-                already_stunned = False
-                for debuff in self.debuffs:
-                        if "is_stunned" in debuff and debuff["is_stunned"]:
-                                already_stunned = True
-                                debuff["duration"] += duration  # Add duration if already stunned
-                                break
-
-                        if not already_stunned:
-                                self.debuffs.append({"is_stunned": True, "duration": duration})
                         
 
 # ------------------------------------------------------------------------------------------------------------------------------------

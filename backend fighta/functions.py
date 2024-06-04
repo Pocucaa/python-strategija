@@ -3,7 +3,7 @@ from spells import *
 def attack(self, target):
         if target.hp > 0:
             damage = self.at
-            target.hp -= damage
+            target.hp -= int(round(damage))
 
         if target.hp < 0:
             target.alive == 0
@@ -18,7 +18,7 @@ def attack(self, target):
         # crit
 
 def defend(self):
-    self.shield += self.hp * 0.1
+    self.shield += int(round(self.hp * 0.1))
 
 def heal(self, amount):
     if self.hp + amount > self.maxhp:
@@ -29,8 +29,6 @@ def heal(self, amount):
 # --> koji mercenari --> mercenary.heal(10)
 
 
-# def use_spell(self):
-# def use item
 # def move
 # shiled se ne remuva na kraju turna
 

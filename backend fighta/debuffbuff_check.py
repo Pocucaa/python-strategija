@@ -47,3 +47,24 @@ def apply_heal(self, heal_amount):
 # fruits.append("orange")
 
 # print(fruits)  # Output: ["apple", "banana", "orange"]
+
+
+    # def apply_stun_end(self):
+    #     """Attempts to remove the stun debuff from the mercenary or extend its duration if already stunned.
+
+    #     Modifies the debuffs list directly.
+    #     """
+
+    #     for i, debuff in enumerate(self.debuffs):
+    #         stun_info = check_stun_debuff(debuff)  # Use the check_stun_debuff function
+
+    #         if stun_info is not None:
+    #             is_stunned, duration = stun_info
+
+    #             if duration > 1:  # Reduce duration if not ending
+    #                 debuff["duration"] -= 1
+    #                 print(f"{self.name}'s stun duration reduced to {debuff['duration']} turns.")
+    #             else:
+    #                 self.debuffs.pop(i)  # Remove debuff if duration ends
+    #                 print(f"{self.name} is no longer stunned.")
+    #             return  # Early exit after handling stun

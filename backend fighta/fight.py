@@ -23,6 +23,7 @@ def Fight_start(player_team, enemy_team, action):
         # for mercenary in team:
             # Check for stun
 
+            
         print(mercenary2.debuffs)
 
         # Check for stun debuff (assuming "is_stunned" key is used)

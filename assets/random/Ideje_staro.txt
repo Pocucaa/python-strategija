@@ -1,96 +1,132 @@
-********************************************************************************************* 28.4.24
-napravi razliku izmedju dasha i teleporta
+kad umres pusti kako si majko kako si oce
+
+napravimo hp bar da bude krug i da ne pise koliko helta
+imas, neko prelazi iz zelene u crvenu boju ( mozda za hard mode )
+
+day and night circle
+
+easter egg, learn soba, goblin random izadje
+
+uradi ceo crew members sa ship start
+
+dodati kao ability power mehaniku ali da nije ability power
+
+dodaj svakom heroju passivnu mana regen
+
+kad je neprijateljski turn posto igra ai, odjednom se kinda asve desi, poseljeno onako dojaja, prvo rangevi pucaju, pa vojska napred po 2/3 cepaju itd
+
+svaki karakter ima svoj kombo stats tipa 4, znaci na 4 mu je kombo i max kombo capaciti
+
+zoomin mehanika, veci field, omogucava veci field i  da mozes da zumiras gde ces da pucas sta god
+
+u kombatu mali boxx za action sta treba da radi kao print, uradi to, select target...
+
+colide mehanika, ako udari u objekat, -15% max hpa
+
+
+
+!!!!!!!!!!!!!!!!! PROBLEM SA ANIMACIJOM
+xy osa, na koju starnu je okrenut itd
+
+ship upgrades ----
+
+
+
+
+mercenaries  ----
+
+
+
+enciklopedija ----
+
+
 
 fight mechanic -----------------------------------------------------------------
-max 3 spells (epic units ulti mozda)
-combo super spell ( 3-5 )
---------------------------------------------------------------------------------
+
+BLOCK 50% damage 50% less hit
+attack base damage
+
+max 3 spells (epic units ulti)
 
 
-ninja poison ---------
-(mozda 5-9 kombo + 2 cp) ad
-passive, attacks apply 14 poison 2-4 tile, 1 tile 33% bonus damage, bleed 1 (malo manji damage)
+Ninja pozicioner ---
+passive  1 tree blink 1 invis 50% damage na invis
 
-1. poison dart
-6 tile range, attack, +27 poison, - 3mv 2 turns
-combo: fires second dart, apply 2 blind, - 4mv 3 turns
+hook, slash
 
-2. dash 
-dash 3, gain 4mv 2 turns
-combo: dash 5, gain 7mv 3 turns, next attack + 22 poison
+shooriken, 2 tiles back dash invis
 
-3. poison bomba
-2x2 poison bomb, +38 poison, root 1
-combo: 3x3, +53 poison, stun 1
+meditacija ili omaeva
 
-wing-chun baja ----------
-ap range 1
-passiv, manji damage ima, 2 udarca udara, onhit 10ap
+ninja poison ----
+
+wing-chun baja ---
+passiv deals 60% AT, hits 3 times
 
 1. chain punches 
 attack 7 times
-combo: attack 11 times, and then once with +66% ap
 
-2. toggle / enter stance
-enter defensive stance, retaliate, 20% block, cant move
-combo: enter divinity 5
+2. stance
+x2 speed
 
-3. meditate (0 mana)
-meditate this and text turn, gain 30% mana, heal 20%, gain 3 euphoria
-combo: divine meditation, - II - + 33%, enter divinity 3 turns insted of euphoria
+3. empower
+20 damage onhit 
+20% health block
 
+Pop ---
+passive increase healing 15%
+1. single target healing
+
+2. krst hil
+
+3. blind (cant attack)
 
 nun ---
-cant attack, cant be attacked, aura 3 tiles, end turn gain euphoria, 40% chance for euphoria 2
+cant attack, cant be attacked
 
-1. no mana clost
-bless target, 2 euphoria
-combo: 5 euphoria, 15% heal
+1. toggle heal aura
 
-2. 
-3 tile aura, heal 15%
-combo: range 5, heal 20%, give 3 regen
+2. toggle blessing aura
 
-3. (proveti sa religijom)
-summon angel. only 1, angel gains dobule bonus from euphoria, burns target on attack, red 2 
-combo: give all units 2 euphoria
+3. toggle empowerment aura --> combo stacks
 
-snajper 1 ------------
-passive, deal 4% more damage per tile
 
-1. tuc tuc 
-attack 3 times, push 3, -3 vm for 2 turns
-combo:
 
-2.
-combo:
+sand bata ---
+passive mummie die, get mana, excess mana creates mummie
+mummies die after 3-4
+
+1. summon 2 mummies from earth, empowered 4
+
+2. sand block 60% meele, 80% ranged block, empowered 1-2 mummiesS
+
+3. teleport if not within tile, empowered, summon mummie
+
+
+
+
+snajper 1 ---
+
+
+snajper 2 ---
+if 3 turns not moved - gain invis
+
+1. take aim
+
+2. (evade bezanija)
 
 3.
-combo:
 
-snajper 3 -------------
+buzdovan bata --
+passive thorns, return 20% damage
 
-passive, if  enemy in 2 range, change to shotgun 
-(sniper: infinite range, 30% crit chance, -20% crit daamge)
-(shotgun: 2 tile range, +66% damage on first tile, knockback 1)
+1. hit stun
 
-1.
-sniper: attack 100% crit, apply 2 wolnerable, 2 slow
-shotgun: attack + 33%, knockback 2, apply 2 weakend, 2 slow
-combo sniper: attack twice, second attack +33%
-combo shotgun: gain 30% evassines, 2 mv 4 turns
-2.
-sniper: gain 40% crit, 70% crit damage, 3 turns
-shotgun: gain 30% damage block, 33% damage, 3 turns
-combo sniper: 160% crit damage
-combo shotgun: 70% damage block
-3.
-sniper: arm, skip turn, next 2 attacks twice, 70% damage
-shotgun: roll 3, 2 euphoria
-combo sniper: next 4 attacks, gain 2 euphoria
-combo shotgun: roll twice, end gain 2 euphoria
+2. shield
 
-jahac ----------
+3. charge
+
+jahac ----
 passive, gain 2 damage per kill per combat
 
 1. leg kick, deals damage knocks back (empowered, double distance and damage mby)
@@ -99,21 +135,8 @@ passive, gain 2 damage per kill per combat
 
 3. 3hit on same target --> dot i stuff
 
-snorlax ripoff --------
+ulti :
 
-passive, every second turn stuned, 20% damage block, more health
-
-1. slam 
-range 2, stun 1, +66% damage
-combo: range 3, stun 2, gain 30% block 2 turns
-
-2. sleep
-sleep, heal 30%
-combo: full hp heal, stunned 3 
-
-3. drowsy
-apply drowsy, next turn 2 stun
-combo: target sleeps, stun 5, gain regen 
 
 
 factions: ninja, wizard, sand, dark knight, 
@@ -121,10 +144,10 @@ factions: ninja, wizard, sand, dark knight,
 --------------------------------
 bezglavitelj (3 range)
 
-passiv, ima (insertuj kul ime za mehaniku) pool od 90% crit chance koji spada kako krita za 10%, dok ne spadne ispod 20%, onda se opet resetuje (mozda izgubi turn),
-na 3 tajla ima bonus 66% damage
+passiv, ima (insertuj kul ime za mehaniku) pool od 90% crit chance koji spada kako krita za 10%, dok ne spadne ispod 20%, onda se opet resetuje i izgubi turn,
+na 3 tajla ima bonus 33% damage
 
- 
+
 1. shinjingmu
 udara 2 puta, ako krita, applaja 3 turn bleed, i dila 70% additional damage
 combo: + 20% krit mehanike, aplaja sigurnih 2 bleeda, hila se 70% damagea od crita, 3 puta napadne
@@ -134,8 +157,8 @@ attacks in a part circle, adds 80% crit damage, may teleport 2 blocks, apply 2 t
 combo: + 20% krit mehanike, full spin, deals 50% damage in between, crits adds 230% damage, teleport 5 blocks next turn
 
 3. decapitate
-if bellow 10% helath instakill, if not, 100% crit, 
-combo: 15% health instakill, if not, 100% crit, double base damage + fixed
+if bellow 10% helath instakill, if not, 100% crit, double base damage
+combo: 15% helath instakill, if not, 100% crit, triple base damage + fixed
  
 ---------------------
 Vampir
@@ -143,18 +166,21 @@ Vampir
 passiv, hila se 20% na udarac, svaki kil 10% damage, 5% max hp
 
 1. drain (range 3)
-deal 1.4x damage with 60% bonus lifesteal
-combo: 2.6x damage insted, 100% bonus lifesteal insted
+deal 1.7x damage with 60% bonus lifesteal
+combo: 2.3x damage insted, 90% bonus lifesteal insted
 
 2. hipnotize
 force units to attack nearest ally, takes 1.5x damage he dealt
 combo: next 3 attack, stun 1 turn at end
 
-3. vampirize
+3. campirize
 teleport range 3 
 or on ally give 20% lifesteal 3 turns
 combo:
-7 range tp, aura skill
+7 range tp, + 80% damage on text attack to ally 
+
+ulti:
+
 
 --------------------
 speed
@@ -169,7 +195,7 @@ combo: deal 4.3x times the charges, decharge 70% charges
 move + 6mv, +43 charge 
 combo: move +8, supercharge 128
 
-3. speed zaps
+3. speed punches
 attack 5 times with 0.4 deal 0.3x charges damage, decharge 25
 combo: 9x attack, decharge 30% + 30
 -------------------
@@ -227,16 +253,16 @@ deal 1.7x damage + Y x stress stacks + 30% weaken 3 turns, take 0.8x of that dam
 combo: deal 3.3x stress stacks damage, both are stuned 1 turn, release 0.7x stress   
 
 ----------------------
-spitter (8 range)
-ap
-passive, attack apply corosive 2
+spitter (mid range)
+
+passive, attack apply corosive damage, poisoning the target
 
 1. split spit
-spits in a cone, applying 4 corosive decrese mv by Y for 3 turns
+spits in a cone, applying 2.3x corosive damage
 combo: larger cone, apply 4.4x corosive damage
 
 2. artillery
-splits long range selected target, deal 6% mhp, +3 corosive , decreses mv by Y for 3 turns
+splits long range selected target, apply 1.8x corosive damage, decreses mv by Y for 3 turns
 combo: 3 spits, decrese mv + 20% for 5 turns
 
 3. summon snakes
@@ -244,7 +270,7 @@ summon 2/3 snakes, low unit, applies passive
 combo: summon 4/5 snakes, chance for mid tier snake 30%
 
 -----------------------
-nanomen (infinit range) nema manu
+nanomen (long range)
 
 passive, spawn 1 nanobot at the end of your turn, max 6 nanobots, nanobots increase damage
 
@@ -262,15 +288,15 @@ combo: create 5 nanobots, summon 4 robots, then deal just the nanobots damage to
 ------------------------
 4 horned goat-man (2 range)
 
-passive, has 1.4x attack, deals true damage, 33% true damage, 33% damage from front block
+passive, has 1.4x attack, 33% true damage, 33% damage from front block
 
 1. charge
 charge to direction 5 tiles range, dealing 2.1x damage
 combo: apply 4 turns bleed, 9 range, if in 4 range deal 66% more spell damage
 
 2. determination
-80% damage block from the front, 60% side damage reduction for 2 turns, looses buff on attack
-combo: retaliate, 3 turns, 33% attack, doesnt lose buff on attack
+80% damage block from the front, 60% side damage reduction for 2 turns, looses buff if attack
+combo: retaliate attack 3 turns, 33% attack
 
 3. pase
 heal 20% health, can jump 4 tiles, gain 3 speed 2 turns
@@ -282,13 +308,13 @@ nunchaku man (2 range)
 passive, deals 50% more damage in 2 tile attacks, has lowwer attack damage, attacks twice
 
 1. swingging 
-2 tile range around attack, +40% damage, 3 attacks
-combo: also damages on 1 tile, deals 320% more damage if in 2 tiles, twice, deal true damage
+2 tile range around attack, 40% damage, 3 attacks
+combo: target attack, deals 120% more damage if in 2 tiles, attack 3 times, deal true damage
 
 
 2. unexpected elpow strike (1 range attack)
-deals 330% damage once, weakens for 3 turns 
-combo: second strike, with 130% bonus damage, 1 stun then weaken 3 , 
+deals 330% damage once, weakens for 3 turns 30%
+combo: second strike, with 130% bonus damage, 1 stun then weaken, 
 
 3. moonwalk
 moonwalk 6 tiles, then gain 3 turns charizma (33% base attack)
@@ -301,7 +327,7 @@ fairy
 passive, tiny, has +3 mv, has -40% maxhealth, 30% misschance
 
 1. aid
-1 range heal, ( mid heal), charm 2
+1 range heal, ( mid heal), charizma 2
 combo: insane heal, 
 
 2. dreamy 
@@ -309,8 +335,8 @@ combo: insane heal,
 combo: everyone with no allye blocking path, effect
 
 3. send fairyes 
-send small energy fairyes to ally, grands 4 turns regen
-combo: send more fairyes, 7 regen, 33% heal amp
+send small energy fairyes to ally, grands 4 turns (low heal) 
+combo: send more fairyes, 7 turns heal, 33% heal more
 
 
 -----------------------
@@ -326,18 +352,18 @@ e sad pazi:
 120 stakova - spell imunity 
 150 stakova - - 4mv, crit deals 3x damage, evassines 40% 
 180 stakova - sleeps i popije kisele, skip next turn, heal 70% hp, 3 turns mamurluk, take small damage
-190 stakova - each attack adds 2 drunken stack, target attacked is stuned, 100% crit 70% crit damage
+190 stakova - each attack adds 1 drunken stack, target attacked is stuned, 100% crit 70% crit damage
 
 1. pivo
 Y( + random offset) pijan, 33% damageblock 4 turns, 2 1.3x attacks, second 66% bonus damage, 1 stun
-combo: naex (veci pijan buff), gain drunk euphoria 3 turns ( 33% more damage, 10% evassines, 10% crit chance, small regen), bonus 40% damage on spell, 2 turn stun
+combo: naex (veci pijan buff), gain drunk euphoria 3 turns ( 33% more damage, 10% evassines, 10% crit chance, small heal), bonus 40% damage on spell, 2 turn stun
 
 2. rakija
-combo: pijan (veci od q), hila , evade next 2 attacks, next 2 attacks twice, spit, 3 turn weakness 
+combo: pijan (veci od q), 33% damage 4 turns, evade next 2 attacks, next 2 attacks twice, spit, 3 turn weakness 
 combo: naex, polupa flasu o glavu, - mali hp, 4 turna + 1 range, 33% attack, apply 2 turn bleed, 3 turns euphoria
 
 3. vinjak
-combo: pijan (malo manji od rakije), dobija pojzin ali dila veci damae, sings, 5 tile range debuff, -20% hit chance; weakened; for 3 turns, deals fixed damage
+combo: pijan (malo manji od rakije), 4 mana heal 4 turns, sings, 5 tile range debuff, -20% hit chance; weakened; for 3 turns, deals fixed damage
 combo: naex, baca pikslu, 4 range attack, deals 3.2x damage stuns 1, 3 turns euphoria, restore 16 mana 
 
 ----------------------
@@ -358,13 +384,12 @@ consume tentacle, low-mid heal, 33% base attack 3 turns
 combo: consume all tentacles in 2 tiles, gain 20% base damage for each for 4 turns, 10% heal for each
 
 ---------------------
-razmnozavac (3 tile range)
+ razmnozavac (3 tile range)
 
 passive, every 3 turns create a copy with (33% max hp, 20% attack, -ms itd), copy lasts 7 turns
-each copy and your attack, apply a debuff for 3 turns -20% damage
-
+each copy and your attack, apply a debuff for 3 turns 5% increased damage (nazovimo debuf1), decreases by 2 stacks each turn
 1. pjung
-each avaliable copy attacks with 33% bonus damage, including you, if target ally, teleport near him, grand both 20% damage 2 turns
+each avaliable copy attacks with 33% bonus damage, including you, 3 debuf1, if target ally, teleport near him, grand both 20% damage 2 turns
 combo: 5 debuf1, teleport each copy near the target before attack, 66% damage, if ally, teleport all copy and you to him, grand everyone 33% damage 3 turns
 
 2. emit
@@ -388,24 +413,24 @@ combo: aplies 3x5 wave, 30% heal
 
 2. big bouble
 creates 3x3 bouble that blocks spell and pushes all enemyes 3 blocks outside the bouble
-combo: 4x4, bubble apply regen, 5 blocks push, 
+combo: heal low heal all inside bouble, 5 blocks push, 
 
 3. send bouble
 send a bouble that explide dealing fixed damage and pushing 2 tiles
 combo: 3x3 explode, + 3 range, more damage
 
 -------------------------
-tuc tuc tuc (5 range)
+mega unit support (5 range)
 
 passive, attack dont deal damage, heal allies for 0.8 damage
 
 1. hands of regen
-give ally 3 turns regen, if he has regen, increase by 3 turns, and heal for fixed
+give ally 3 turns end of turn regen, if he has regen, increase by 3 turns, and heal for fixed
 combo: give all alies 2 turn regen and heal small heal
 
 2. 
 give ally buff 30% heal amp then attack ally 4 times, 
-combo: 11 times
+combo: 7 times, end heal 60%
 
 3. 
 give regen to self and closest ally, heal mana 
@@ -414,7 +439,7 @@ combo: heal 2 closests ally, bigger heal and mana, give 1 combo
 ---------------------------
 teleporter (4 range)
 
-passive, teleports insted of walking, after teleportation gain 11% first stepll amp, stacks
+passive, teleports insted of walking, after teleportation gain 33% first stepll amp, stacks
 
 1. damage
 teleport 2, then attack 1 enemy in 4 tiles, if not, regain mana
@@ -427,15 +452,15 @@ combo: teleport 7 tiles, bigger damage, blind 2 turn
 
 
 3. 
-teleport ally, then give him 1 damage block, and your passive
-combo: give bigger passive, 3 allyes,, teleport 6, 2 block
+teleport 3 ally, then give him 1 damage block, and your passive
+combo: give 3 passives, teleport 6, 2 block
 --------------------------
 wolf (meelee)
-sheruju helte
-passive, attacks apply stacking 2 bleed, 3 wolfs, if in 4 tiles gain 33% attack
+
+passive, attacks apply stacking bleed, 3 wolfs, if in 4 tiles gain 33% attack
 
 1. howl
-howl, gain team stacking 10% attack, 1mv, for 1 turns
+howl, gain team stacking 10% attack, 1mv, for 3 turns
 combo: all wolfs howl, gain 33% to all wolfes on next attack and apply double passive
 
 2. 
@@ -446,7 +471,7 @@ combo: attack twice, first deals 66% more
 target 1 enemy as pray, lowers mid armor, take 20% more daamge when below 50% health
 combo: mega armor loss, deal 15% max hp damage 
 --------------------------
-combo ninja (meele, 2 tile shurieni) (!!! izmeniti)
+combo ninja (meele, 2 tile shurieni)
 
 passive, has max 7 combo points, preform combo at 5, 70% daamge at 2-3 tile range
 
@@ -464,7 +489,7 @@ combo: euphoria 5, 3 combo points, double heal
 
 ------------------------
 4 crowos *
-shared pool
+
 passive, 2 tiles aura, 10% misschance, 10% more attack damage, not stacking, low hp high mv
 
 1. crow gawk
@@ -479,7 +504,7 @@ combo: give double bonus damage, guarantee crit
 crow 
 ------------------------
 hunter *
-
+ 
 passive, start with 1 crow
 
 ------------------------
@@ -516,8 +541,8 @@ combo: aoe, 66% damage, apply 4 burn if not burned
 combo: 4x4 flame, 5 turns
 
 3. explode
-deal 6maxhp damage + 2 per burn stack
-combo: exhost burn, 8hpdamage ap + 5 per burn stack 
+deal 12maxhp damage + 2 per burn stack
+combo: exhost burn, 17hpdamage ap + 5 per burn stack 
 -----------------------
 burning head skeleton (4 range)
 blue flame, 50/50 ap at
@@ -527,7 +552,6 @@ passive, attack apply 2 burn, gain 10% damage block
 1. 
 
 2.
-
 3.
 ------------------------
 izgoreo ceo (elite) (4)
@@ -599,7 +623,7 @@ combo:
 chronos 2 tile
 ad
 
-passive, attacks has 20% stun chanse and 80 magic damage
+passive, attacks has 20% stun chanse and 50 magic damage
 
 1. 
 attack twice, second attack deals 33% bonus damage
@@ -612,7 +636,6 @@ combo: 4 targets, 2 charges
 3. 
 dash to a location 4 tiles, deal damage in 2 hexes
 combo: 7 range, apply 2 confusion, +33% damage
-
 ----------------------
 water girl (4 range)
 support, ap
@@ -626,7 +649,7 @@ Combo: 4 targets, bigger heal, apply 2 regen
 Combo: bigger
 
 3. Apply 5 regen to target, 2 euphoria
-Combo: 11 regen, heal, 3 euphoria
+Combo: 7 regen, heal, 3 euphoria
 
 ----------------------------
 Tenk ,meele
@@ -653,7 +676,7 @@ Root target 2 turns, 33% damage, 3x onhit damage
 Combo: attack twice, +1 range, deal additional 130% damage if rooted, add 2 turns to root
 
 2. Tree
-Creates a tree for 3 turns, 2 tiles aura, 30% heal amp, end turn heal
+Creates a tree for 3 turns, 2 tiles aura, 30% heal amp, can be clicked to mid heal
 Combo: 2x2 tree, 5 tiles aura, 40% heal amp, bigger heal when clicked
 
 3. Thorns
@@ -732,171 +755,30 @@ passive
 1.
 2.
 3.
--------------------------
-bombas
-ap / ad 
 
-passive, svaki 2 potez passive random stun
-
-1. 
-2.
-3.
- 
-farmer
-
-
-
-passive every 2 attack push 1
 
 --------------------------------------------------------------------------------------------------------
-relikvije
+ajtemi
 
-merc size 11
-max combo +1,2
-stats increase
-add summon
-start shield
-
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
 
 
 
 (prosiriti tim u jednom trenutku)
--------------------------------------------------------------------------------------------------------- first 5
-
-sand bata ------------
-passive mummie die, get mana, excess mana creates mummie ili ( second turn 2 mummies)
-mummies die after 4 turns
-
-1.
-summon 2 mummies from earth, 
-combo: summon 5, gain 33% attack to mummies and self
-
-2.
-sand block 60% meele, 80% ranged block
-combo: summon 3 mummies, gain 20% block 4 turns
-
-3.
-teleport 6
-combo: summon 3 mummies, heal 15%
-
-buzdovan bata ------------
-passive thorns, return 30% damage
-
-1. hit stun
-stun 1, 1.8x damage
-combo: stun 2, 2.3x damage, gain 150 shield
-
-2. shield
-gain 300 shield
-combo: gain megashield 800
-
-3. charge
-charge 4 tiles, first target hit, stun 1, 33% damage
-combo: 6 tiles, 66% damage, aply 2 weaken
-
-Ninja pozicioner ------------
-passive 4 turns coldown, when attacked W, gain double combo points, max combo 5-9
-
-1. hook, slash
-hook 3, slash, 33% damage
-combo: hook 5, double slash, first 33%, second 66%, 2 bleed
-
-2. shuriken
-shooriken, 3 times 33% damage, 2 tiles back dash invis 1
-combo: 7 shurikens, 4 tiles back gain 3 invis
-
-3. omaeva
-range 4, if empty tile, dash to it, passing enemyes take attack damage + 33%
-combo: 6 range, gain 2 combo, 66% damage, gain 1 invis
-
-snajper 2 ------------
-if 3 turns not moved - gain invis
-
-1. take aim
-charge attack, next turn attack, dealing 3.3x damage and skip
-combo: 33% chance to crit, +66% damage
-
-2. roll ( doesnt break passive )
-teleport 2 (roll), gain 66% on your next attack 
-combo: teleport 4, gain 99% damage and push 2
-
-3. decoy
-create a decoy, 20% health, max 3
-combo: create 3 decoys, 30% health, decoys have 30% thorns
-
-Pop ------------
-passive increase healing 15%
-
-1. single target healing
-heal 20%
-combo: krst heal, +66% heal
-
-2. holy water
-give 2 regen, heal 10%
-combo: give 5 regen, 1 more closest target, 15% heal 
-
-3. blind (cant attack)
-blind 2, deal 33% ap
-combo: blind every enemy for 1 turn, deal 66% ap
-
-
-van helsing ----------
-
-passiv roka undedove, silverboldtovi, ako je flegovan kao evil, vampir debufo nemoze se hila bla bla
-
-
-1. sekira ako su blizu slow damage
-combo: 
-
-2. vukodlak, 
-combo, pretvorio si njega u vuka
-
-3. lazno te optuzi
-optuzite, postajes evil
-combo: sledeci udarac garantovan krit sa bonus demidzom
-
-
-puzzle lik
-
-lik sa statuama kamene statue
-
-lik sa kamenom
-
-knockback mehanika
-
-1. prizovi kamen
-combo; privuce gurne , gurnes kamen udari lika koji si gurnuo
-2. push
-
-3. pull
 
 
 
-shaman
-
-passiv master of elements, abilites combo eachother
-ruka protektuje alaja
-
-munja + voda -> stan 1
-munja + zemlja -> aoe
-munja + vatra --> root
-munja + led --> razori zid stvori male ledena sranja svuda po mapi 1x1 
-
-voda + zemlja --> bilje heal aoe
-vodu + vatru --> blind
-
-zemlja + led --> pomeri zid ili oblikujes
-
-vetra + vatra --> spali iza pozar
-
-1. lightning zap chain
-combo: vetar knockback 2 cela mapa
-2. voda gejzir bara
-combo: led wall 
-3. zemlja ruka
-combo: vatra pozar
 
 
-voda led lik
 
-summoner koji koristi objekte kao summoner unite
+
+

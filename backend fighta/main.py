@@ -15,6 +15,7 @@ pygame.display.set_caption("Tatakae")
 font = pygame.font.Font(None, 36)
 text_color = (255, 255, 255)
 background_color = (0, 0, 0)
+
 # -----------------------------------------------
 
 # Main loop
@@ -31,6 +32,7 @@ action_keys = {
 player_team = []
 enemy_team = []
 action = None
+
 # -----------------------------------------------
 
 while running:
