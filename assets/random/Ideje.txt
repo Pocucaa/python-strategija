@@ -828,6 +828,18 @@ add summon
 start shield
 
 
+--------------------------------------------------------------------------------------------------------
+eventovi
+
+merc shop, merc + relic
+ship shop, ship upg + consumables
+
+fight
+random boost
+random merc wants to join, 40% buy merc
+
+fight your own army
+
 
 
 (prosiriti tim u jednom trenutku)

@@ -33,12 +33,14 @@ def heal(self, amount):
     else:
         self.hp += amount
 
+
+
+
+
 # --------------------------------------------------------------------------------------------------------------------------
 
 # --> koji mercenari --> mercenary.heal(10)
 
-
-# def move
 # shiled se ne remuva na kraju turna
 
 

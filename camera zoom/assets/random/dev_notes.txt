@@ -1,0 +1,79 @@
+imas u samplu za mainmenu foru za fontove...
+
+
+provali vektore, trebace ti za karaktere
+self argument je u sustini sta god stavis, klasu itd
+iz camera1 uzmi random foru za stvaranje random objekata na battlefieldu
+window = pygame.display.get_surface()  # Get the display surface where the game is rendered
+
+u main menuu opcije i u borbi isto da se importuju, da moze da se namestaju keyinput
+
+za pasive napravi passiv fajl, gde imas passive funkcije za svaku akciju: onhitpassive, endturnpassive itd...
+za udarac pre udarca pogledas on hit passive, ili posle sta god, ubacis argument ime, i trazis po imenu koristeci if funkciju.
+
+u informacijama imas foru za flip i update, lag se moze smanjiti ako ne updajtujes ceo screen, nego zasebno updajtujes sta treba
+
+
+pygame je ekstenzija na pajton, neko dodo ono sto trepa i skratio posao, pogle kad skontas to al proveri da li je to bebina igrica za kompanije i ozbiljne ljude, mozda je poblje da sto vise moguce koristis pajton!
+
+
+kad umres pusti kako si majko kako si oce
+
+napravimo hp bar da bude krug i da ne pise koliko helta
+imas, neko prelazi iz zelene u crvenu boju ( mozda za hard mode )
+
+day and night circle
+
+easter egg, learn soba, goblin random izadje
+
+uradi ceo crew members sa ship start
+
+adaptive damage --> kombinuje oba stata, ( true damage )
+
+dodati kao ability power mehaniku ali da nije ability power
+
+dodaj svakom heroju passivnu mana regen
+
+kad je neprijateljski turn posto igra ai, odjednom se kinda asve desi, poseljeno onako dojaja, prvo rangevi pucaju, pa vojska napred po 2/3 cepaju itd
+
+svaki karakter ima svoj kombo stats tipa 4, znaci na 4 mu je kombo i max kombo capaciti
+
+zoomin mehanika, veci field, omogucava veci field i  da mozes da zumiras gde ces da pucas sta god
+
+u kombatu mali boxx za action sta treba da radi kao print, uradi to, select target...
+
+colide mehanika, ako udari u objekat, -15% max hpa
+
+shield mozda da se skida malo na kraju svakog poteza???
+
+!!!!!!!!!!!!!!!!! PROBLEM SA ANIMACIJOM
+xy osa, na koju starnu je okrenut itd
+
+ship upgrades ----
+mercenaries  ----
+enciklopedija ----
+
+------ 
+nigela pitaj inspo;
+milana isto
+
+-----   Battle logic
+
+namesti da grid ne krece od gore i skipuje nego da krece odakle treba
+srediti magic brojeve
+srediti biblioteke i raspodelu fajlova
+
+----- Main menu
+srediti kvadrate da reaguju tacno na velicini slike
+dodati opcije za: setupkeys, volume...
+
+* ------------
+grid.py (logika grida i reakcije misa) --> salje poziciju (14 x 4 setup grid) (14 x 21 battle grid)
+utilities --> sve vezano za battle mehaniku
+MercUtilities --> objekti mercenarija
+merc render --> draw opcije i animacija
+level logic
+story textovi zaseban fajl
+NIJEDNA DEFINICIJA U MAIN FUNKCIJI!!!
+
+

@@ -21,14 +21,15 @@ def redraw(window, width, height, rows, mouse_pos,  mumija_idle, vitez_idle, top
     pozadina(width, height, top_zone, left_zone)
     grid(window, width, height, rows, mouse_pos, top_zone, left_zone, tile_size)
     interactive_screen(window, width, height, top_zone)    # dodati da ne svetli ovde
+    
 
     character_position = [
-        left_zone + vitez_idle.frame_width,
-        top_zone + (tile_size / 2)
+        left_zone + (tile_size / 20),
+        top_zone + (tile_size / 2) + 15 + tile_size
     ]
     character_position1 = [
         left_zone + (tile_size / 20),
-        top_zone + 5 * (tile_size / 2)              # za 2 se pomera tajl
+        top_zone + 5 * (tile_size / 2) +15             # za 2 se pomera tajl
     ]
 
     # Calculate the position to blit the character sprite

@@ -1,5 +1,5 @@
 import pygame, sys  
-
+tile_size = 50
 # ------------------------------------------------------------------------------------------------------------------------------------
 
 class Mercenary:
@@ -36,7 +36,9 @@ class Character:
         self.animation_speed = animation_speed  # Adjust as needed
         self.animation_timer = 0
         self.frames_to_skip = 4 - num_frames
-    
+
+# ------------------------------------------------------------------------------------------------------------------------------------
+
     def update(self, dt):
         self.animation_timer += dt
         if self.animation_timer >= self.animation_speed:
@@ -45,15 +47,45 @@ class Character:
             if self.current_frame >= self.num_frames - self.frames_to_skip:
                 self.current_frame = 0
 
+# ------------------------------------------------------------------------------------------------------------------------------------
+
     def draw(self, surface, x, y, character_sprite_size):
         frame_rect = pygame.Rect(self.current_frame * self.frame_width, 0, self.frame_width, self.frame_height)
         frame_surface = self.spritesheet.subsurface(frame_rect)
         resized_frame_surface = pygame.transform.scale(frame_surface, (character_sprite_size, character_sprite_size))
         surface.blit(resized_frame_surface, (x, y))
 
-    def position(self, pos_x, pos_y):
-        self.char_position = [pos_x, pos_y]
+# ------------------------------------------------------------------------------------------------------------------------------------
+    def get_width(self):
+            return self.frame_width
 
+    def get_height(self):
+            return self.frame_height
+    
+    def get_position(self):
+
+        self.center_width  = self.frame_width / 2
+        self.center_height  = self.frame_height / 2
+        half_tile = (tile_size)
+
+        self.pos_x = half_tile -self.center_width
+        self.pos_y = half_tile -self.center_height
+
+        return self.position[self.pos_x, self.pos_y]
+
+# ------------------------------------------------------------------------------------------------------------------------------------
+
+####
+
+# ------------------------------------------------------------------------------------------------------------------------------------
+
+####
+
+# ------------------------------------------------------------------------------------------------------------------------------------
+
+    def half_tile(tile_size):
+        tile_size_half = tile_size / 2
+        return tile_size_half
 # ------------------------------------------------------------------------------------------------------------------------------------ 
 
 
