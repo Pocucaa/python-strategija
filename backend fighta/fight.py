@@ -23,6 +23,23 @@ def Fight_start(player_team, enemy_team, action):
         # for mercenary in team:
             # Check for stun
 
+
+#   # Handle debuffs
+#     for debuff in self.debuffs[:]:  # Use a copy to avoid index issues during removal
+#         if "is_stunned" in debuff and debuff["is_stunned"]:
+#         # Handle stun effect (e.g., print message, prevent actions)
+#             print(f"{self.name} is stunned and cannot act!")
+
+#         # Handle burn effect (assuming it deals damage)
+#         elif "is_burned" in debuff and debuff["is_burned"]:
+#             damage = 2  # Replace with your burn damage calculation
+#             self.hp -= damage
+#             debuff["duration"] -= 1
+#             print(f"{self.name} takes {damage} burn damage!")
+
+#         if debuff["duration"] <= 0:
+#                 self.debuffs.remove(debuff)
+#                 print(f"{self.name}'s burn has ended.")
             
         print(mercenary2.debuffs)
 
@@ -41,7 +58,8 @@ def Fight_start(player_team, enemy_team, action):
         elif action == 4:
             spell1(mercenary1, mercenary2)  # Replace with target selection logic
 
-
+        elif action == 5:
+            spell2(mercenary1)  # Replace with target selection logic
 
 
 def start_turn(self):

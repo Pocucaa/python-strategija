@@ -16,30 +16,61 @@
 # charm: 20% misschanse, take 10% less damage
 # confusion: 10% chanse to be stunned start turn
 # regen: end of turn heal 3% hp
+# rage: +15% damage
+# lifesteal: heal for % damage dealt from attacks
+# manabutn: burn x mana
 
+# --------------------------------------------------------------------------------------------------------------------------
 
+def apply_stun(self, duration):
 
-class Buff:
-    def __init__(self, name, duration, modifiers):
-        self.name = name
-        self.duration = duration
-        self.modifiers = modifiers  # Dictionary of stat changes (e.g., {"damage": 0.2, "accuracy": 0.1})
+                already_stunned = False
+                for debuff in self.debuffs:
+                        if "is_stunned" in debuff and debuff["is_stunned"]:
+                                already_stunned = True
+                        debuff["duration"] += duration  # Extend duration if already stunned
+                        print(f"{self.name}'s stun duration extended to {debuff['duration']} turns.")
+                        break
 
-class Debuff:
-    def __init__(self, name, duration, effects):
-        self.name = name
-        self.duration = duration
-        self.effects = effects  # List of functions to apply during the debuff (e.g., reduce_speed)
+                if not already_stunned:
+                        self.debuffs.append({"is_stunned": True, "duration": duration})
+                        print(f"{self.name} is stunned for {duration} turns.")
 
+# --------------------------------------------------------------------------------------------------------------------------
+
+def apply_burn(self, duration):
+
+                already_burned = False
+                for debuff in self.debuffs:
+                        if "is_burned" in debuff and debuff["is_burned"]:
+                                already_burned = True
+                        debuff["duration"] += duration  # Extend duration if already stunned
+                        print(f"{self.name}'s stun duration extended to {debuff['duration']} turns.")
+                        break
+
+                if not already_burned:
+                        self.debuffs.append({"is_burned": True, "duration": duration})
+                        print(f"{self.name} is burned for {duration} turns.")
+
+# --------------------------------------------------------------------------------------------------------------------------
 
 def apply_regen(self, duration):
-        # Heal amount is calculated as 2% of max HP
-    heal_amount = int(0.02 * self.maxhp)
-    self.apply_buff(duration, {"heal_amount": heal_amount})  # Apply buff with heal amount
+                # Heal amount is calculated as 2% of max HP
+                heal_amount = int(0.02 * self.maxhp)
+                self.apply_buff(duration, {"heal_amount": heal_amount})  # Apply buff with heal amount
+
+# --------------------------------------------------------------------------------------------------------------------------
 
 def apply_heal(self, heal_amount):
-        # Direct heal for the specified amount
-    self.hp = min(self.hp + heal_amount, self.maxhp)  # Ensure HP doesn't exceed max HP
+                # Direct heal for the specified amount
+                self.hp = min(self.hp + heal_amount, self.maxhp)  # Ensure HP doesn't exceed max HP
+
+# --------------------------------------------------------------------------------------------------------------------------
+
+def apply_shield(self, shield_amount):
+                # Direct heal for the specified amount
+                self.hp = min(self.hp + shield_amount, (self.maxhp * 1.5))  # Ensure SHIELD is 1.5 maxhp
+
 
 
 
@@ -47,24 +78,3 @@ def apply_heal(self, heal_amount):
 # fruits.append("orange")
 
 # print(fruits)  # Output: ["apple", "banana", "orange"]
-
-
-    # def apply_stun_end(self):
-    #     """Attempts to remove the stun debuff from the mercenary or extend its duration if already stunned.
-
-    #     Modifies the debuffs list directly.
-    #     """
-
-    #     for i, debuff in enumerate(self.debuffs):
-    #         stun_info = check_stun_debuff(debuff)  # Use the check_stun_debuff function
-
-    #         if stun_info is not None:
-    #             is_stunned, duration = stun_info
-
-    #             if duration > 1:  # Reduce duration if not ending
-    #                 debuff["duration"] -= 1
-    #                 print(f"{self.name}'s stun duration reduced to {debuff['duration']} turns.")
-    #             else:
-    #                 self.debuffs.pop(i)  # Remove debuff if duration ends
-    #                 print(f"{self.name} is no longer stunned.")
-    #             return  # Early exit after handling stun

@@ -18,13 +18,7 @@ class Mercenary:
                 self.buffs = []
                 self.debuffs = []
 
-        def apply_debuff(self, duration):
-                if "is_stunned" in self.debuffs and self.debuffs["is_stunned"] is True:
-                        self.debuffs.append({"duration": duration})
-                else:
-                        self.debuffs.append({"is_stunned": True, "duration": duration})
 
-                        
 
 # ------------------------------------------------------------------------------------------------------------------------------------
 

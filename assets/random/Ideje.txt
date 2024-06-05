@@ -734,7 +734,7 @@ passive
 3.
 -------------------------
 bombas
-ap / ad 
+ap 
 
 passive, svaki 2 potez passive random stun
 
@@ -747,6 +747,76 @@ farmer
 
 
 passive every 2 attack push 1
+
+-------------------------
+ap
+manaman
+
+passive, steal 12 mana with each attack, 33% to attack twice
+
+1. spin, damage in circle, steal 36 mana, 15% lifesteal
+combo: spin twice, with 20% lifesteal
+2. blink teleport 4, rage 3
+combo: teleport 7, rage 6
+
+3. transform, 2 aoe 3 black burn
+combo: gain 25% mana, 3 aoe
+
+passive, burns 7 mana to add that daamge to attack and apply black 2 burn, range 4, 33% to attack twice
+
+ 1. mana burn target 70, deal 30% damage, heal for damage done
+combo:  120, deal 66% damage
+ 2. meteor 2x2, 3 burn, damage
+combo: more damage, 3x3, 5 burn
+
+3. transform, gain 3 %10 lifesteal
+combo: heal 20%, 20% lifesteal
+
+-------------------------
+ad
+
+
+passive, gain def stacks when defending (10% of shield), taking tamage (10% of damage), and using spells (10% of missing hp),
+gainini 1% block and 1% magic block for each 5 stacks.
+reaching 300 regenerate 30% missing health, gain bonus 18 maxhp until end of combat
+
+1. gain 15 shield and stacks, trigger def twice
+combo: gain 60 stacks, gain 20% dmg block buff 3
+2.
+combo: 
+3.
+combo: 
+
+------------------------
+ap
+execution orb
+
+passive, 3 tiles aura, end turn give 7-13 Y stacks.
+
+1. laser, 30% stacks damage + fixed, allyes heal
+combo: 
+2.
+combo: 
+3.
+combo: 
+
+-----------------------
+giant brain
+ap
+
+passive intaligence, each spell cast gives 2 ap, each attack gives 1 damage, each def gives 1% damage block (60% max),
+ +20% damage on confzed targets
+
+1. telepathy, stun 1, confusion 4
+combo: stun 2, confusion 6, steal 5 ap
+2. inf range attack, 17% current manaburn damage, confusion 2
+combo:  confusion 3, 37%, steal 5 damage
+3. push away 2, apply 3 confusion, teleport 2
+combo: steal 1 mv, apply 5 confusion
+
+-----------------------
+
+
 
 --------------------------------------------------------------------------------------------------------
 relikvije

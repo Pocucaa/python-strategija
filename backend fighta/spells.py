@@ -6,8 +6,8 @@
 # combo: stun 2, 2.3x damage, gain 150 shield
 
 # 2. shield
-# gain 300 shield
-# combo: gain megashield 800
+# gain 80 shield
+# combo: gain megashield 260
 
 # 3. charge
 # charge 4 tiles, first target hit, stun 1, 33% damage
@@ -21,7 +21,7 @@ def spell1(self, target):
         if target.hp > 0:
             damage = self.at * 1.8
             target.hp -= int(round(damage))
-            target.apply_debuff(2)
+            target.apply_stun(2)
 
         if target.hp < 0:
             target.alive = 0
@@ -32,3 +32,7 @@ def spell1(self, target):
             print(f" Target HP = {target.hp}")
         else: 
             print(f"{target.name} is dead.")
+
+def spell2(self):
+    if self.hp > 0:
+        self.apply_shield(800)
