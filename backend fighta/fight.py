@@ -11,7 +11,7 @@ from collections import deque
 
 
 
-
+# proveri da li su koordinate misa na tajlu gde je enemy, check target
 
 def Fight_start(player_team, enemy_team, action):
 
@@ -61,6 +61,8 @@ def Fight_start(player_team, enemy_team, action):
         elif action == 5:
             spell2(mercenary1)  # Replace with target selection logic
 
+        # elif action == 6:
+            # spell2(mercenary1)  # Replace with target selection logic
 
 def start_turn(self):
         # Check for and apply debuffs at the start of the turn

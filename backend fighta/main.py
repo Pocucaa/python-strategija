@@ -26,7 +26,7 @@ action_keys = {
     pygame.K_a: 1,  # Attack (action = 1)
     pygame.K_s: 2,  # Defend (action = 2)
     pygame.K_d: 4,  # Spell (action = 4)
-    pygame.K_f: 5,  # Spell (action = 4)
+    pygame.K_f: 5,  # Spel2 (action = 5)
     # You can add more keys for other actions
 }
 

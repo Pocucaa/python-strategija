@@ -6,8 +6,8 @@
 # combo: stun 2, 2.3x damage, gain 150 shield
 
 # 2. shield
-# gain 80 shield
-# combo: gain megashield 260
+# gain 40 shield
+# combo: gain megashield 120
 
 # 3. charge
 # charge 4 tiles, first target hit, stun 1, 33% damage
@@ -35,4 +35,4 @@ def spell1(self, target):
 
 def spell2(self):
     if self.hp > 0:
-        self.apply_shield(800)
+        self.apply_shield(40)
