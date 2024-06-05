@@ -61,11 +61,11 @@ def main():
 
         dt = clock.tick(60) / 1000  # Convert milliseconds to second /// promeniti mozda na milisekunde zbog laga, videcemo
 
-        redraw(window, screen_width, screen_height, rows, mouse_pos, mumija_idle, vitez_idle, top_inactive_zone, left_inactive_zone, tile_size)
+        redraw(window, screen_width, screen_height, rows, mouse_pos, mumija_idle, vitez_idle, vitez_setnja, top_inactive_zone, left_inactive_zone, tile_size)
 
         mumija_idle.update(dt)
         vitez_idle.update(dt)
-
+        vitez_setnja.update(dt)
         # camera_group.update()  # Update the camera
         # camera_group.custom_draw(window)  # Draw the scene with custom camera settings
 

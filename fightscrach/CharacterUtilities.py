@@ -61,7 +61,7 @@ class Character:
 
     def get_height(self):
             return self.frame_height
-    
+
     def get_position(self):
 
         self.center_width  = self.frame_width / 2
@@ -103,3 +103,4 @@ class Character:
 # evasines
 # magic block
 # physical block
+

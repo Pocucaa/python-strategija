@@ -17,7 +17,7 @@ def grid(window, width, height, rows, mouse_pos, top_zone, left_zone, tile_size)
         if y != 0 and y != height - top_zone and y != top_zone:
             pygame.draw.line(window, (0, 0, 0), (left_zone, y), (width - left_zone + offsetX, y))
 # ------------------------------------------------------------------------------------------------------------------------------------ 
-def redraw(window, width, height, rows, mouse_pos,  mumija_idle, vitez_idle, top_zone, left_zone, tile_size):
+def redraw(window, width, height, rows, mouse_pos,  mumija_idle, vitez_idle, vitez_setnja, top_zone, left_zone, tile_size):
     pozadina(width, height, top_zone, left_zone)
     grid(window, width, height, rows, mouse_pos, top_zone, left_zone, tile_size)
     interactive_screen(window, width, height, top_zone)    # dodati da ne svetli ovde
@@ -40,7 +40,32 @@ def redraw(window, width, height, rows, mouse_pos,  mumija_idle, vitez_idle, top
     mouse_tile_y = (mouse_pos[1] - top_zone) // tile_size
 
     mumija_idle.draw(window, character_position[0], character_position[1], mumija_idle_size)
-    vitez_idle.draw(window, character_position1[0], character_position1[1],vitez_idle_size)
+    vitez_idle.draw(window, character_position1[0], character_position1[1], vitez_idle_size)
+
+
+    
+    walking_distance = 0  # Initialize walking distance
+
+    if character_position[0] - 10 < mouse_pos[0] < character_position[0] + 10:
+        while walking_distance < 2 * tile_size:  # Loop until desired distance is reached
+            direction = "right"  # Assuming movement is right for this example
+            walking_speed = 5  # Adjust walking speed as needed
+
+            # Update character position based on direction and speed
+            character_position1[0] += walking_speed if direction == "right" else -walking_speed  # Handle left movement if needed
+
+            # Update walking distance
+            walking_distance += walking_speed
+
+            vitez_setnja.draw(window, character_position1[0], character_position1[1], vitez_idle_size)
+            
+
+
+
+
+
+
+
 
     offsetY = 5
     # Check if the mouse position is within the boundaries of the tiles and make it glow
