@@ -1,85 +1,78 @@
-import pygame, sys
-from grid import *
-from utilities import *
 from CharacterUtilities import *
+from functions import *
+from CurrentParty import *
+from debuffbuff_check import *
+from spells import *
+from collections import deque
+
+# def, at, move, qwe, item
+# ! -> dodati i enemije
+
+# proveri da li su koordinate misa na tajlu gde je enemy, check target
+
+def Fight_start(player_team, enemy_team, action):
+
+    # all_mercenaries = list(player_team + enemy_team)
+    # all_mercenaries.sort(key=lambda merc: merc.sp, reverse=True)
+
+    # while all_mercenaries:                                  # gotovo kad prodje kroz sve i prodje 1 ciklus
+    #     current_merc = all_mercenaries.popleft()
+        # for mercenary in team:
+            # Check for stun
 
 
-#!!!!!!!!!!!!!!!!!!!! promenjeni fajlovi: ideje, dev_notes, informacije, fight ( informacije u fajlovima )
+#   # Handle debuffs
+#     for debuff in self.debuffs[:]:  # Use a copy to avoid index issues during removal
+#         if "is_stunned" in debuff and debuff["is_stunned"]:
+#         # Handle stun effect (e.g., print message, prevent actions)
+#             print(f"{self.name} is stunned and cannot act!")
 
-def main():
-    pygame.init()                                                                                
-    screen_width = 1280                                                                          
-    screen_height = 720    
-    window = pygame.display.set_mode((screen_width, screen_height))     
-    pygame.event.set_grab(True)  # Grab the mouse cursor
-# ------------------------------------------------------------------------------------------------------------------------------------  setup                                          
-    play = True                                                                                    
-    clock = pygame.time.Clock()
+#         # Handle burn effect (assuming it deals damage)
+#         elif "is_burned" in debuff and debuff["is_burned"]:
+#             damage = 2  # Replace with your burn damage calculation
+#             self.hp -= damage
+#             debuff["duration"] -= 1
+#             print(f"{self.name} takes {damage} burn damage!")
 
-    top_inactive_precent = 0.15
-    left_inactive_precent = 0.15
+#         if debuff["duration"] <= 0:
+#                 self.debuffs.remove(debuff)
+#                 print(f"{self.name}'s burn has ended.")
+            
+        print(mercenary2.debuffs)
 
-    top_inactive_zone = int(screen_height * top_inactive_precent)
-    left_inactive_zone = int(screen_width * left_inactive_precent)
+        # Check for stun debuff (assuming "is_stunned" key is used)
+        if any(debuff["is_stunned"] for debuff in mercenary2.debuffs):
+            print(f"{mercenary2.name} is stunned and cannot act!")
 
-    tile_size = 50 # radi na 20 i 50 i 25                                                             
-    rows = int(screen_height - top_inactive_zone // tile_size)      
+        if action == 1:
+            attack(mercenary1, mercenary2)  # Replace with target selection logic
+            print(f" HP = {mercenary2.hp}")  # Assuming target has hp attribute
 
-    mumija_idle = Character("assets/likovi/mumijalik_2.png", 5)
-    vitez_idle = Character("assets/likovi/crni_vitez_idle.png", 4, animation_speed=0.2)
-    vitez_setnja = Character("assets/likovi/crni_vitez_walk.png", 6, animation_speed=0.1)
-    vitez_sprites = [vitez_idle, vitez_setnja]
-# ------------------------------------------------------------------------------------------------------------------------------------
+        elif action == 2:
+            defend(mercenary1)
+            print(f"SHIELD = {mercenary1.shield}")
 
+        elif action == 4:
+            spell1(mercenary1, mercenary2)  # Replace with target selection logic
 
-# Create instances of CameraGroup and Player
+        elif action == 5:
+            spell2(mercenary1)  # Replace with target selection logic
 
-    # camera_group = CameraGroup()
+        # elif action == 6:
+            # spell2(mercenary1)  # Replace with target selection logic
 
-
-
-# ------------------------------------------------------------------------------------------------------------------------------------  start 
-    while play:                                                          
-        mouse_x, mouse_y = pygame.mouse.get_pos()
-        mouse_pos = [mouse_x, mouse_y]
-
-        for event in pygame.event.get():                                
-            if event.type == pygame.QUIT:                              
-                play = False          
-
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_ESCAPE:
-                pygame.quit()
-                sys.exit()
-
-        # if event.type == pygame.MOUSEWHEEL:
-        #     camera_group.zoom_scale += event.y * 0.03   
-        #     if camera_group.zoom_scale >= 3:
-        #         camera_group.zoom_scale = 3
-        #     if camera_group.zoom_scale <= 0.1:
-        #         camera_group.zoom_scale = 0.1                                 
-
-        dt = clock.tick(60) / 1000  # Convert milliseconds to second /// promeniti mozda na milisekunde zbog laga, videcemo
-
-        redraw(window, screen_width, screen_height, rows, mouse_pos, mumija_idle, vitez_idle, vitez_setnja, top_inactive_zone, left_inactive_zone, tile_size)
-
-        mumija_idle.update(dt)
-        vitez_idle.update(dt)
-        vitez_setnja.update(dt)
-        # camera_group.update()  # Update the camera
-        # camera_group.custom_draw(window)  # Draw the scene with custom camera settings
-
-# ------------------------------------------------------------------------------------------------------------------------------------        
+# def start_turn(self):
+#         # Check for and apply debuffs at the start of the turn
+#         for debuff in self.debuffs:
+#             debuff.on_turn_start(self)
+#             debuff.tick()
+#             if debuff.is_expired():
+#                 self.debuffs.remove(debuff)
 
 
+# # Example target selection function (replace with your actual logic)
+# def select_target(mercenary, enemy_team):
+#     # Implement logic to choose a target from the enemy team (e.g., weakest enemy)
+#     # This is a placeholder, replace with your desired target selection strategy
+#     return enemy_team[0]
 
-
-
-# ------------------------------------------------------------------------------------------------------------------------------------        
-        # Update the display
-        pygame.display.update()
-
-    # pygame.quit()
-
-if __name__ == "__main__":
-    main()

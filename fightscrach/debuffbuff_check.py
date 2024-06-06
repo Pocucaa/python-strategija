@@ -16,18 +16,17 @@
 # charm: 20% misschanse, take 10% less damage
 # confusion: 10% chanse to be stunned start turn
 # regen: end of turn heal 3% hp
+# rage: +15% damage
+# lifesteal: heal for % damage dealt from attacks
+# manaburn: burn x mana
 
 
-# def Bleedcheck (bleed):
-#     if bleed == true:
 
-    # def RegenCheck (regen):
-    #     if regen == true:
-    #         mercenary.Hp =+ mercenary.HP + 
-    #     if regen == false:
-    #         skip
+# --------------------------------------------------------------------------------------------------------------------------
 
 
-# Define functions for checking passive effects and debuffs (you'll need to implement these)
-def check_passive_effects(self):
-    ''''''
+
+# fruits = ["apple", "banana"]
+# fruits.append("orange")
+
+# print(fruits)  # Output: ["apple", "banana", "orange"]

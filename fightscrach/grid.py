@@ -1,9 +1,10 @@
-import pygame
+import pygame, sys
 from utilities import *
-from CharacterUtilities import Character
+from CharacterUtilities import *
 
 
-
+clock = pygame.time.Clock()
+dt = clock.tick(60) / 1000  # Convert milliseconds to second /// promeniti mozda na milisekunde zbog laga, videcemo
 
 def grid(window, width, height, rows, mouse_pos, top_zone, left_zone, tile_size):
     offsetX = 5
@@ -16,6 +17,7 @@ def grid(window, width, height, rows, mouse_pos, top_zone, left_zone, tile_size)
     for y in range(top_zone, height, distance_between_rows):
         if y != 0 and y != height - top_zone and y != top_zone:
             pygame.draw.line(window, (0, 0, 0), (left_zone, y), (width - left_zone + offsetX, y))
+            
 # ------------------------------------------------------------------------------------------------------------------------------------ 
 def redraw(window, width, height, rows, mouse_pos,  mumija_idle, vitez_idle, vitez_setnja, top_zone, left_zone, tile_size):
     pozadina(width, height, top_zone, left_zone)
@@ -46,7 +48,7 @@ def redraw(window, width, height, rows, mouse_pos,  mumija_idle, vitez_idle, vit
     
     walking_distance = 0  # Initialize walking distance
 
-    if character_position[0] - 10 < mouse_pos[0] < character_position[0] + 10:
+    if character_position[0] - 15 < mouse_pos[0] < character_position[0] + 15:
         while walking_distance < 2 * tile_size:  # Loop until desired distance is reached
             direction = "right"  # Assuming movement is right for this example
             walking_speed = 5  # Adjust walking speed as needed
