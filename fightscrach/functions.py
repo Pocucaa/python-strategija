@@ -1,16 +1,28 @@
 
-
 # --------------------------------------------------------------------------------------------------------------------------
 
 def attack(self, target):
+        
+        crit = 0
+
         if target.hp > 0:
-            damage = self.at
+            damage = self.at + crit
+
+        if damage < target.shield > 0 :
+            target.shield -= int(round(damage))
+
+        elif damage > target.shield > 0:
+            target.hp -= int(round(damage - target.shield))
+            target.shield = 0
+
+        elif target.shield == 0:
             target.hp -= int(round(damage))
 
         if target.hp < 0:
             target.alive = 0
         # pokreni smrt funckiju
 
+# --------------------------------------------------
         if target.hp > 0:
             print(f"{self.name} attacks {target.name} for {damage} damage!")
         else: 
@@ -23,28 +35,27 @@ def attack(self, target):
 
 def defend(self):
 
-    self.shield = min(self.hp + int(round(self.maxhp * 0.1)), (self.maxhp * 1.5))  # Ensure SHIELD is 1.5 maxhp
+    self.shield = min(self.hp + int(round(self.maxhp * 0.05)), (self.maxhp * 1.5))  # Ensure SHIELD is 1.5 maxhp
 
 # --------------------------------------------------------------------------------------------------------------------------
 
 def heal(self, amount):
-    if self.hp + amount > self.maxhp:
-        self.hp = self.maxhp  # Prevent overhealing
-    else:
-        self.hp += amount
 
+    self.shield = min(self.hp + int(round(amount)), (self.maxhp))
+# --> koji mercenari --> mercenary.heal(10)
 
+# --------------------------------------------------------------------------------------------------------------------------
 
 
 
 # --------------------------------------------------------------------------------------------------------------------------
 
-# --> koji mercenari --> mercenary.heal(10)
+def char_infront(pos_x, target_x, tile_size):
 
-# shiled se ne remuva na kraju turna
-
-
-
+    if target_x == pos_x + tile_size:
+        return True
+    else:
+        return False
 
 # ------------------------------------------------------------------------------------------------------------------------------------
 

@@ -5,7 +5,33 @@ fight mechanic -----------------------------------------------------------------
 max 3 spells (epic units ulti mozda)
 combo super spell ( 3-5 )
 --------------------------------------------------------------------------------
+na 6 i 12 levelu dobija buff
 
+goblini zeleni, crveni, (ljubicasti)
+
+crveni imaju perma rage i euphoria
+
+--------------------------------------------------------------------------------
+meele goblin
+passive, gains 1 ad, 1 ap for each goblin, +20% crit chanase
+
+1. attack twice, slow 3 3
+combo: attack aditional enemy, +20% crit chanse
+2. berzerk 3 turns, +20% damage taken, +25% damage
+combo: 6, heal 15%
+
+3 X
+
+range goblin
+passive, gains 1 ad, 1 ap for each goblin, rage when < 30% hp
+
+1. 1.7x damage, apply 2 bleed, -3 mv 2
+combo: 2.3x, 4 -4mv
+2. gain shield, -15% block 3 
+combo: bigger shield, 25% 5
+
+3 X
+--------------------------------------------------------------------------------
 
 ninja poison ---------
 (mozda 5-9 kombo + 2 cp) ad

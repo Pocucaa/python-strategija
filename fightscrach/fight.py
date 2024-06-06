@@ -5,7 +5,6 @@ from debuffbuff_check import *
 from spells import *
 from collections import deque
 
-# def, at, move, qwe, item
 # ! -> dodati i enemije
 
 # proveri da li su koordinate misa na tajlu gde je enemy, check target
