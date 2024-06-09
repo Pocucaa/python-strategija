@@ -23,7 +23,6 @@ def redraw(window, width, height, rows, mouse_pos,  mumija_idle, vitez_idle, vit
     pozadina(width, height, top_zone, left_zone)
     grid(window, width, height, rows, mouse_pos, top_zone, left_zone, tile_size)
     interactive_screen(window, width, height, top_zone)    # dodati da ne svetli ovde
-    
 
     character_position = [
         left_zone + (tile_size / 20),
@@ -34,7 +33,6 @@ def redraw(window, width, height, rows, mouse_pos,  mumija_idle, vitez_idle, vit
         top_zone + 5 * (tile_size / 2) +15             # za 2 se pomera tajl
     ]
 
-    # Calculate the position to blit the character sprite
     mumija_idle_size = int(tile_size * 1.1)
     vitez_idle_size = int(tile_size * 1.2)
 
@@ -42,33 +40,41 @@ def redraw(window, width, height, rows, mouse_pos,  mumija_idle, vitez_idle, vit
     mouse_tile_y = (mouse_pos[1] - top_zone) // tile_size
 
     mumija_idle.draw(window, character_position[0], character_position[1], mumija_idle_size)
-    vitez_idle.draw(window, character_position1[0], character_position1[1], vitez_idle_size)
+    # vitez_idle.draw(window, character_position1[0], character_position1[1], vitez_idle_size)
 
 
-    
+    is_walking = False  # Initialize flag
     walking_distance = 0  # Initialize walking distance
 
     if character_position[0] - 15 < mouse_pos[0] < character_position[0] + 15:
+        is_walking = True  # Set flag to True when walking condition is met
         while walking_distance < 2 * tile_size:  # Loop until desired distance is reached
             direction = "right"  # Assuming movement is right for this example
-            walking_speed = 5  # Adjust walking speed as needed
+            walking_speed = 15  # Adjust walking speed as needed
 
             # Update character position based on direction and speed
             character_position1[0] += walking_speed if direction == "right" else -walking_speed  # Handle left movement if needed
 
             # Update walking distance
             walking_distance += walking_speed
-
             vitez_setnja.draw(window, character_position1[0], character_position1[1], vitez_idle_size)
-            
+
+    else:
+        is_walking = False  # Set flag to False when not walking
+
+
+    # Draw based on the flag
+    if is_walking:
+        vitez_setnja.draw(window, character_position1[0], character_position1[1], vitez_idle_size)
+        vitez_setnja.update(dt)
+    else:
+        vitez_idle.draw(window, character_position1[0], character_position1[1], vitez_idle_size)  # Use character_position for idle state
 
 
 
 
 
-
-
-
+# ------------------------------------------------------------------------------------------------------------------------------------ 
     offsetY = 5
     # Check if the mouse position is within the boundaries of the tiles and make it glow
     if 0 <= mouse_tile_x < width and 0 <= mouse_tile_y < rows:

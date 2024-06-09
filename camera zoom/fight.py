@@ -55,12 +55,12 @@ def main():
                 pygame.quit()
                 sys.exit()
 
-        if event.type == pygame.MOUSEWHEEL:
-            camera_group.zoom_scale += event.y * 0.03   
-            if camera_group.zoom_scale >= 3:
-                camera_group.zoom_scale = 3
-            if camera_group.zoom_scale <= 0.1:
-                camera_group.zoom_scale = 0.1                                 
+        # if event.type == pygame.MOUSEWHEEL:
+        #     camera_group.zoom_scale += event.y * 0.03   
+        #     if camera_group.zoom_scale >= 3:
+        #         camera_group.zoom_scale = 3
+        #     if camera_group.zoom_scale <= 0.1:
+        #         camera_group.zoom_scale = 0.1                                 
 
         dt = clock.tick(60) / 1000  # Convert milliseconds to second /// promeniti mozda na milisekunde zbog laga, videcemo
 
@@ -70,13 +70,13 @@ def main():
         mumija_idle.update(dt)
         vitez_idle.update(dt)
 
-        # camera_group.update()  # Update the camera
-        # camera_group.custom_draw()
+        camera_group.update()  # Update the camera
+        camera_group.custom_draw()
 
 # ------------------------------------------------------------------------------------------------------------------------------------        
 
 
-
+# probaj da povecas redraw funkciju blit za zoom faktor
 
 
 # ------------------------------------------------------------------------------------------------------------------------------------        

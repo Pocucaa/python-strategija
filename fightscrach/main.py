@@ -4,9 +4,10 @@ from utilities import *
 from CharacterUtilities import *
 from fight import *
 
-# kretanje po mapi ilkj
-#lengs za left_zone i top_zones
 
+# kretanje po mapi ilkj
+# lengs za left_zone i top_zones
+# turn timer
 #!!!!!!!!!!!!!!!!!!!! promenjeni fajlovi: ideje, dev_notes, informacije, fight ( informacije u fajlovima )
 
 def main():
@@ -34,7 +35,6 @@ def main():
     vitez_idle = Character("assets/likovi/crni_vitez_idle.png", 4, animation_speed=0.2)
     vitez_setnja = Character("assets/likovi/crni_vitez_walk.png", 6, animation_speed=0.1)
     vitez_sprites = [vitez_idle, vitez_setnja]
-
 # ------------------------------------------------------------------------------------------------------------------------------------
 
     action_keys = {

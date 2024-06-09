@@ -31,6 +31,16 @@ combo: 2.3x, 4 -4mv
 combo: bigger shield, 25% 5
 
 3 X
+
+goblin rider 
+passive, gains 1 ad, 1 ap for each goblin, + 3mv
+(targets support or range)
+
+1. gain + 3mv, next attack 1.7x damage
+combo: 5mv, 2.3x damage, gain 2 range
+2. howl if enemy infront, apply 3 panic
+combo: 2x3 aoe, 5 panic
+
 --------------------------------------------------------------------------------
 
 ninja poison ---------
@@ -840,7 +850,49 @@ combo:  confusion 3, 37%, steal 5 damage
 3. push away 2, apply 3 confusion, teleport 2
 combo: steal 1 mv, apply 5 confusion
 
+
 -----------------------
+samurai cat
+ad
+
+passive, 30% evasiness, deal 33% more damage to crows, on death revive 9 times once, with 99% hp
+deal 70% damage to the right of the target
+
+1. slash attack with 1.7x, apply 3 bleed
+combo: slash twice, target takes 30% more damage 3 turns
+2. train, gain 20% evasiness and damage 4 turns
+combo: 20% crit chanse, invisibile 
+3. cutness, charm 3, 1x3 aoe
+combo: 3 aoe charm 4
+
+
+
+-----------------------
+demon, enemy elite 2x2 { ubaci ga kao playablejednom}
+mixed
+
+passive, deals 20 damage in 2 range, perma rage, attack apply 2 black burn
+
+1. summon 2 pithwolfs [ apply burn and bleed 2, very angry + 60% damage ]
+combo: heal all pithwolfs 30% hp
+2. apply 4 blackburn to 4 random targets
+combo: 6 to 6 targets, selfheal 6.6% hp 6 turns
+3. teleport to nearest target next turn
+combo: summon 6 pithwolfs
+-----------------------
+boss [onaj lik iz sna polu defected sds polu kentur]
+ap
+mv 77
+
+passive, perma euphoria, end turn regen 5% mana, heal 2%, 30% block,
+
+1. beam closest enemy and 2 tiles behind, apply 7 blue burn, deal damage
+combo: 3 tiles behind, 66% damage 
+2. time warp, heal 33% lost hp and mana lost in last 3 turns
+combo: heal all loses
+3. teleport nearet enemy 2 tiles infront
+combo: teleport 3 nearest, stun 2, deal 5% hp 
+
 
 
 

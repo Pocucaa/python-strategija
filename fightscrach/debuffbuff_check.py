@@ -19,7 +19,7 @@
 # rage: +15% damage
 # lifesteal: heal for % damage dealt from attacks
 # manaburn: burn x mana
-
+# panic: +20% damage taken, +2mv, stun, 
 
 
 # --------------------------------------------------------------------------------------------------------------------------

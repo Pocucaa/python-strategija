@@ -1,7 +1,7 @@
 import pygame, sys  
 from random import randint 
 from grid import *
-
+from CharacterUtilities import *
 # smanjiti funckije koristeci ovo
 #        self.display_surface = pygame.display.get_surface()  # Get the display surface where the game is rendered
 #
@@ -92,28 +92,35 @@ class CameraGroup(pygame.sprite.Group):
         mumija_idle_image = mumija_idle.get_current_frame  # Get the current image from the Character
         vitez_idle_image = vitez_idle.get_current_frame  # Get the current image from the Character
 
-        mumija_idle_scaled = pygame.transform.scale(mumija_idle_image, (mumija_idle.get_width() * self.zoom_scale, mumija_idle.get_height() * self.zoom_scale))
-        vitez_idle_scaled = pygame.transform.scale(vitez_idle_image, (vitez_idle.get_width() * self.zoom_scale, vitez_idle.get_height() * self.zoom_scale))
+        # mumija_idle_scaled = pygame.transform.scale(mumija_idle_image, (mumija_idle.get_width() * self.zoom_scale, mumija_idle.get_height() * self.zoom_scale))
+        # vitez_idle_scaled = pygame.transform.scale(vitez_idle_image, (vitez_idle.get_width() * self.zoom_scale, vitez_idle.get_height() * self.zoom_scale))
 
         
-        character_position = [
-            left_zone +  mumija_idle_scaled.get_width(),
-            top_zone + (tile_size / 2)
-        ]
-        character_position1 = [
-            left_zone + vitez_idle_scaled.get_width(),
-            top_zone + 5 * (tile_size / 2)
-        ]
+        # character_position = [
+        #     left_zone +  mumija_idle_scaled.get_width(),
+        #     top_zone + (tile_size / 2)
+        # ]
+        # character_position1 = [
+        #     left_zone + vitez_idle_scaled.get_width(),
+        #     top_zone + 5 * (tile_size / 2)
+        # ]
 
-        self.display_surface.blit(mumija_idle_scaled, (character_position))
-        self.display_surface.blit(vitez_idle_scaled, (character_position1))
+        # #self.display_surface.blit(mumija_idle_scaled, (character_position))
+        # #self.display_surface.blit(vitez_idle_scaled, (character_position1))
 
-        # Adjust positions based on zoom for proper centering within camera view
-        character_position[0] += (scaled_rect.centerx - self.half_w) / self.zoom_scale
-        character_position[1] += (scaled_rect.centery - self.half_h) / self.zoom_scale
-        character_position1[0] += (scaled_rect.centerx - self.half_w) / self.zoom_scale
-        character_position1[1] += (scaled_rect.centery - self.half_h) / self.zoom_scale
+        # # Adjust positions based on zoom for proper centering within camera view
+        # character_position[0] += (scaled_rect.centerx - self.half_w) / self.zoom_scale
+        # character_position[1] += (scaled_rect.centery - self.half_h) / self.zoom_scale
+        # character_position1[0] += (scaled_rect.centerx - self.half_w) / self.zoom_scale
+        # character_position1[1] += (scaled_rect.centery - self.half_h) / self.zoom_scale
 
-        self.display_surface.blit(mumija_idle_scaled, character_position)
-        self.display_surface.blit(vitez_idle_scaled, character_position1)
+        # self.display_surface.blit(mumija_idle_scaled, character_position)
+        # self.display_surface.blit(vitez_idle_scaled, character_position1)
+        
+        brod = pygame.image.load("assets/img/brod.png")
+        scaled_brod = pygame.transform.scale(brod, (600, 600))
+
+
+
+        self.display_surface.blit(scaled_brod, (600 * self.zoom_scale, 600 * self.zoom_scale))
 # ------------------------------------------------------------------------------------------------------------------------------------ 
